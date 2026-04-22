@@ -3,215 +3,597 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>在日华人不动产服务 | Nexcess不動産</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<title>イエステーションくらしあ｜在日华人不动产服务</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;font-size:15px;color:#333;background:#fff;line-height:1.8}
-a{color:inherit;text-decoration:none}
-.container{max-width:1060px;margin:0 auto;padding:0 24px}
-.sec{padding:64px 0}
-.sec-bg{background:#f5f7f5}
-.sec-title{font-family:'Noto Serif SC',serif;font-size:26px;font-weight:600;color:#1d5c30;text-align:center;margin-bottom:6px}
-.sec-en{text-align:center;font-size:11px;color:#aaa;letter-spacing:3px;margin-bottom:8px}
-.sec-bar{width:44px;height:3px;background:#2a7a3f;margin:0 auto 40px;border-radius:2px}
-.btn-outline-green{display:inline-block;border:2px solid #2a7a3f;color:#2a7a3f;padding:11px 34px;border-radius:4px;font-size:14px;font-weight:500;transition:all .2s}
-.btn-outline-green:hover{background:#2a7a3f;color:#fff}
-
-/* TOP BAR */
-.topbar{background:#1d5c30;color:#c8f0d0;font-size:12px;display:flex;justify-content:flex-end;gap:24px;padding:6px 28px}
-.topbar a{color:#c8f0d0;transition:color .15s}
-.topbar a:hover{color:#fff}
-
-/* HEADER */
-.header{background:#fff;border-bottom:3px solid #2a7a3f;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.09)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 28px;gap:16px}
-.logo-wrap .logo-jp{font-family:'Noto Serif SC',serif;font-size:21px;font-weight:600;color:#1d5c30}
-.logo-wrap .logo-cn{font-size:10px;color:#aaa;letter-spacing:2px;margin-top:1px}
-.header-actions{display:flex;align-items:center;gap:14px}
-.tel-block .tel{font-size:19px;font-weight:700;color:#1d5c30}
-.tel-block .tel-lbl{font-size:10px;color:#999}
-.wechat-btn{background:#07c160;color:#fff;border:none;padding:10px 18px;border-radius:5px;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px;font-family:inherit}
-.wechat-btn:hover{background:#06ad56}
-
-/* NAV */
-.nav{background:#235c35}
-.nav ul{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;max-width:1060px;margin:0 auto}
-.nav ul li a{display:block;color:#d4edd9;padding:12px 18px;font-size:13px;transition:background .2s}
-.nav ul li a:hover{background:#1d5c30;color:#fff}
-
-/* HERO */
-.hero{background:linear-gradient(150deg,#1d5c30 0%,#2a7a3f 55%,#3a9451 100%);min-height:440px;display:flex;align-items:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 0,transparent 20px);background-size:20px 20px}
-.hero-content{position:relative;z-index:2;padding:60px 28px 60px 60px;max-width:640px}
-.hero-badge{display:inline-block;border:1px solid rgba(255,255,255,.35);color:rgba(255,255,255,.9);font-size:11px;padding:5px 16px;border-radius:20px;letter-spacing:2px;margin-bottom:20px}
-.hero-h1{font-family:'Noto Serif SC',serif;font-size:34px;font-weight:600;color:#fff;line-height:1.45;margin-bottom:16px;text-shadow:0 2px 6px rgba(0,0,0,.2)}
-.hero-h1 em{color:#a8e6be;font-style:normal}
-.hero-p{color:rgba(255,255,255,.85);font-size:14px;line-height:1.95;margin-bottom:28px}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.hero-btn-main{background:#fff;color:#1d5c30;padding:13px 28px;border-radius:4px;font-size:14px;font-weight:700;transition:opacity .2s}
-.hero-btn-main:hover{opacity:.9}
-.hero-btn-sub{border:1px solid rgba(255,255,255,.6);color:#fff;padding:13px 28px;border-radius:4px;font-size:14px;transition:background .2s}
-.hero-btn-sub:hover{background:rgba(255,255,255,.12)}
-.hero-stats{position:absolute;bottom:0;right:0;display:flex;background:rgba(0,0,0,.38)}
-.hero-stat{padding:16px 24px;text-align:center;border-left:1px solid rgba(255,255,255,.15)}
-.hero-stat:first-child{border-left:none}
-.stat-num{font-size:22px;font-weight:700;color:#9de3b8}
-.stat-lbl{font-size:10px;color:rgba(255,255,255,.7);margin-top:2px;letter-spacing:.3px}
-
-/* NEWS BAND */
-.news-band{background:#f0f7f2;border-top:1px solid #cde8d5;border-bottom:1px solid #cde8d5}
-.news-inner{display:flex;align-items:stretch;max-width:1060px;margin:0 auto;padding:0 24px}
-.news-lbl{background:#2a7a3f;color:#fff;font-size:12px;padding:0 18px;display:flex;align-items:center;white-space:nowrap;min-height:46px}
-.news-scroll{padding:10px 18px;flex:1}
-.news-row{display:flex;align-items:center;gap:10px;padding:3px 0;font-size:13px}
-.news-date{color:#999;font-size:11px;white-space:nowrap}
-.news-tag{font-size:10px;background:#e0f0e6;color:#2a7a3f;border:1px solid #b8ddc4;padding:1px 7px;border-radius:3px;white-space:nowrap}
-.news-row a{color:#1d5c30}
-.news-row a:hover{text-decoration:underline}
-
-/* PROPERTIES */
-.prop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-.prop-card{border:1px solid #e0e0da;border-radius:6px;overflow:hidden;transition:transform .2s,box-shadow .2s;display:block;color:inherit}
-.prop-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.11)}
-.prop-img{height:186px;background:linear-gradient(135deg,#c8e6ce,#9dd4ae);position:relative;display:flex;align-items:center;justify-content:center;font-size:52px;color:#4a9060}
-.prop-flag{position:absolute;top:10px;left:10px;background:#c0392b;color:#fff;font-size:11px;padding:3px 9px;border-radius:3px}
-.prop-flag.sale{background:#1a6fb5}
-.prop-body{padding:16px}
-.prop-kind{display:inline-block;font-size:11px;background:#e6f4ea;color:#2a7a3f;border:1px solid #c2dfc9;padding:2px 8px;border-radius:3px;margin-bottom:8px}
-.prop-name{font-size:15px;font-weight:700;color:#222;margin-bottom:5px}
-.prop-loc{font-size:12px;color:#888;margin-bottom:12px}
-.prop-price{font-size:23px;font-weight:700;color:#c0392b}
-.prop-price-unit{font-size:13px;color:#888;font-weight:400;margin-left:3px}
-.prop-meta{display:flex;gap:16px;margin-top:10px;padding-top:10px;border-top:1px solid #eee;font-size:12px;color:#666}
-.prop-meta span strong{display:block;font-size:13px;color:#333;font-weight:600}
-.view-all{text-align:center;margin-top:36px}
-
-/* ===== SHINDAN ===== */
-.shindan-sec{background:linear-gradient(160deg,#f2faf4,#e8f4eb);border-top:1px solid #cde8d5;border-bottom:1px solid #cde8d5}
-.shindan-intro{max-width:620px;margin:0 auto 40px;text-align:center;color:#555;font-size:14px;line-height:1.9}
-.shindan-box{max-width:720px;margin:0 auto;background:#fff;border-radius:10px;box-shadow:0 4px 24px rgba(0,0,0,.1);overflow:hidden}
-
-/* progress */
-.shindan-progress{background:#f4f5f3;padding:20px 32px 14px}
-.prog-bar-wrap{height:5px;background:#ddd;border-radius:3px;overflow:hidden;margin-bottom:14px}
-.prog-bar{height:100%;background:#2a7a3f;border-radius:3px;transition:width .4s ease}
-.prog-dots{display:flex;justify-content:space-between}
-.prog-dot{width:26px;height:26px;border-radius:50%;border:2px solid #ddd;background:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;color:#bbb;transition:all .3s;font-weight:500}
-.prog-dot.active{border-color:#2a7a3f;background:#2a7a3f;color:#fff}
-.prog-dot.done{border-color:#2a7a3f;background:#2a7a3f;color:#fff}
-
-/* step */
-.shindan-body{padding:30px 32px}
-.step-panel{display:none}
-.step-panel.active{display:block}
-.step-q{font-family:'Noto Serif SC',serif;font-size:18px;font-weight:600;color:#1d5c30;margin-bottom:6px}
-.step-hint{font-size:12px;color:#999;margin-bottom:22px}
-.opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.opt-btn{background:#f9faf9;border:2px solid #dde8df;border-radius:8px;padding:16px 14px;cursor:pointer;text-align:left;transition:all .2s;font-family:inherit;width:100%}
-.opt-btn:hover{border-color:#2a7a3f;background:#f0f7f2}
-.opt-btn.selected{border-color:#2a7a3f;background:#e6f4ea}
-.opt-icon{font-size:22px;margin-bottom:6px;display:block}
-.opt-label{font-size:14px;font-weight:500;color:#222;display:block}
-.opt-sub{font-size:11px;color:#888;margin-top:2px;display:block}
-.step-nav{display:flex;justify-content:space-between;align-items:center;margin-top:26px}
-.step-back{background:none;border:1px solid #ccc;color:#666;padding:10px 20px;border-radius:4px;cursor:pointer;font-size:13px;font-family:inherit}
-.step-back:hover{background:#f5f5f5}
-.step-next{background:#2a7a3f;color:#fff;border:none;padding:11px 28px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:500;font-family:inherit;transition:background .2s}
-.step-next:hover{background:#1d5c30}
-.step-next:disabled{background:#ccc;cursor:not-allowed}
-
-/* result */
-.result-panel{display:none;padding:30px 32px}
-.result-panel.active{display:block}
-.result-header{text-align:center;margin-bottom:26px}
-.result-icon{font-size:44px;margin-bottom:10px}
-.result-title{font-family:'Noto Serif SC',serif;font-size:22px;color:#1d5c30;margin-bottom:5px}
-.result-sub{font-size:12px;color:#888;line-height:1.6}
-.result-cards{display:grid;gap:12px;margin-bottom:22px}
-.result-card{border-left:4px solid #2a7a3f;background:#f5faf6;padding:14px 18px;border-radius:0 6px 6px 0}
-.result-card.warn{border-color:#e67e22;background:#fdf6ee}
-.result-card-title{font-size:13px;font-weight:700;color:#1d5c30;margin-bottom:5px}
-.result-card.warn .result-card-title{color:#c0600a}
-.result-card p{font-size:13px;color:#555;line-height:1.8}
-.result-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;padding-top:20px;border-top:1px solid #eee}
-.cta-wechat{background:#07c160;color:#fff;padding:13px 26px;border-radius:5px;font-size:14px;font-weight:600;cursor:pointer;border:none;font-family:inherit}
-.cta-wechat:hover{background:#06ad56}
-.cta-restart{background:none;border:1px solid #2a7a3f;color:#2a7a3f;padding:12px 22px;border-radius:5px;font-size:13px;cursor:pointer;font-family:inherit}
-.cta-restart:hover{background:#f0f7f2}
-
-/* FLOW */
-.flow-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:1px;background:#e0e0da}
-.flow-step{background:#fff;padding:28px 18px;text-align:center}
-.flow-num{width:32px;height:32px;background:#2a7a3f;color:#fff;border-radius:50%;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
-.flow-icon{font-size:26px;margin-bottom:10px}
-.flow-title{font-size:13px;font-weight:700;color:#1d5c30;margin-bottom:5px}
-.flow-desc{font-size:11px;color:#777;line-height:1.7}
-
-/* LOAN */
-.loan-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.loan-card{background:#fff;border:1px solid #e0e0da;border-radius:6px;padding:22px;border-top:4px solid #2a7a3f}
-.loan-card-title{font-size:15px;font-weight:700;color:#1d5c30;margin-bottom:12px}
-.loan-card p,.loan-card li{font-size:13px;color:#555;line-height:1.85}
-.loan-card ul{list-style:none;padding:0}
-.loan-card ul li::before{content:'✓ ';color:#2a7a3f;font-weight:700}
-.loan-card ul li{padding:2px 0}
-.loan-note{background:#fff8e6;border:1px solid #f0d880;border-radius:6px;padding:15px 18px;margin-top:20px;font-size:13px;color:#7a6010;display:flex;gap:10px;align-items:flex-start}
-
-/* WECHAT */
-.wechat-sec{background:#1d5c30}
-.wechat-inner{display:flex;align-items:center;justify-content:center;gap:56px;flex-wrap:wrap;padding:56px 24px}
-.wechat-text h2{font-family:'Noto Serif SC',serif;font-size:26px;color:#fff;margin-bottom:12px}
-.wechat-text p{color:rgba(255,255,255,.8);font-size:14px;line-height:1.9;max-width:400px}
-.wechat-text .wid{color:#a8e6be}
-.wechat-qr-wrap{text-align:center}
-.qr-frame{width:156px;height:156px;background:#fff;border-radius:8px;padding:10px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center}
-.qr-placeholder{width:136px;height:136px;background:#f0f0f0;border:2px dashed #ccc;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#aaa;font-size:11px;text-align:center}
-.qr-label{color:rgba(255,255,255,.75);font-size:12px}
-.wechat-id{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:6px 16px;border-radius:4px;font-size:13px;margin-top:5px;letter-spacing:1px}
-.wechat-steps{margin-top:18px;display:flex;flex-direction:column;gap:8px}
-.wechat-step{display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,.8);font-size:13px}
-.ws-num{background:rgba(255,255,255,.15);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;margin-top:2px}
-
-/* COMPANY */
-.company-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
-.company-about h3{font-family:'Noto Serif SC',serif;font-size:19px;color:#1d5c30;margin-bottom:14px}
-.company-about p{font-size:14px;color:#555;line-height:1.95;margin-bottom:12px}
-.company-table{width:100%;border-collapse:collapse;font-size:13px}
-.company-table th,.company-table td{padding:9px 12px;border:1px solid #e0e0da;text-align:left}
-.company-table th{background:#f5f7f5;color:#555;font-weight:500;width:36%}
-.license-badge{display:inline-flex;align-items:center;gap:6px;background:#e6f4ea;border:1px solid #c2dfc9;color:#1d5c30;padding:7px 14px;border-radius:4px;font-size:12px;margin-top:14px}
-
-/* FOOTER */
-footer{background:#162820;color:rgba(255,255,255,.7);font-size:12px}
-.footer-main{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px;padding:44px 24px 28px;max-width:1060px;margin:0 auto}
-.foot-logo{font-family:'Noto Serif SC',serif;font-size:18px;color:#fff;margin-bottom:8px}
-.footer-brand p{color:rgba(255,255,255,.55);font-size:12px;line-height:1.8}
-.foot-col h4{color:#9de3b8;font-size:12px;font-weight:600;margin-bottom:12px;letter-spacing:.5px}
-.foot-col ul{list-style:none}
-.foot-col ul li{padding:3px 0}
-.foot-col ul li a{color:rgba(255,255,255,.6);font-size:12px}
-.foot-col ul li a:hover{color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.1);text-align:center;padding:14px 24px;color:rgba(255,255,255,.35);font-size:11px}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .header-inner{padding:10px 16px}
-  .tel-block{display:none}
-  .hero-content{padding:40px 20px}
-  .hero-h1{font-size:24px}
-  .hero-stats{position:static;background:rgba(0,0,0,.45)}
-  .hero{flex-direction:column;min-height:auto}
-  .opt-grid{grid-template-columns:1fr}
-  .loan-grid,.company-grid{grid-template-columns:1fr}
-  .footer-main{grid-template-columns:1fr 1fr}
-  .shindan-body{padding:22px 20px}
-  .shindan-progress{padding:16px 20px 12px}
+/* ===== CSS VARIABLES (kurashia color palette) ===== */
+:root {
+  --orange:    #e86b1f;
+  --orange-lt: #f5a060;
+  --orange-dk: #c4561a;
+  --orange-bg: #fff5ee;
+  --brown:     #7a4a20;
+  --cream:     #fdf8f3;
+  --gray-50:   #f9f9f9;
+  --gray-100:  #f0f0f0;
+  --gray-200:  #e2e2e2;
+  --gray-400:  #aaa;
+  --gray-600:  #666;
+  --gray-800:  #333;
+  --white:     #fff;
+  --text:      #2c2c2c;
+  --accent:    #e86b1f;
+  --shadow:    0 2px 12px rgba(0,0,0,.08);
+  --shadow-lg: 0 6px 30px rgba(0,0,0,.13);
 }
-@media(max-width:480px){
-  .footer-main{grid-template-columns:1fr}
-  .hero-btns{flex-direction:column}
+
+/* ===== RESET ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 15px; color: var(--text); background: var(--white); line-height: 1.8;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ===== LANG SWITCHER (hidden JP text) ===== */
+body.lang-jp { font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif; }
+.cn { display: block; }
+.jp { display: none; }
+body.lang-jp .cn { display: none; }
+body.lang-jp .jp { display: block; }
+span.cn, span.jp { display: inline; }
+body.lang-jp span.cn { display: none; }
+body.lang-jp span.jp { display: inline; }
+
+/* ===== LAYOUT ===== */
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.sec { padding: 64px 0; }
+.sec-bg { background: var(--cream); }
+.sec-bg2 { background: var(--gray-50); }
+.sec-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 24px; font-weight: 700; color: var(--orange-dk);
+  text-align: center; margin-bottom: 4px;
+}
+body.lang-jp .sec-title { font-family: 'Noto Serif JP', serif; }
+.sec-en { text-align: center; font-size: 11px; color: var(--gray-400); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 8px; }
+.sec-bar { width: 40px; height: 3px; background: var(--orange); margin: 0 auto 40px; border-radius: 2px; }
+
+/* ===== TOP INFO BAR ===== */
+.topbar {
+  background: var(--orange-dk);
+  color: rgba(255,255,255,.85);
+  font-size: 12px;
+  display: flex; justify-content: flex-end; align-items: center;
+  gap: 20px; padding: 6px 28px;
+}
+.topbar a { color: rgba(255,255,255,.85); transition: color .15s; }
+.topbar a:hover { color: #fff; }
+
+/* ===== HEADER ===== */
+.header {
+  background: var(--white);
+  border-bottom: 3px solid var(--orange);
+  position: sticky; top: 0; z-index: 300;
+  box-shadow: 0 2px 10px rgba(0,0,0,.09);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 28px; gap: 16px;
+}
+.logo-wrap { display: flex; align-items: center; gap: 12px; }
+.logo-icon {
+  width: 44px; height: 44px; background: var(--orange);
+  border-radius: 6px; display: flex; align-items: center; justify-content: center;
+  font-size: 22px; color: #fff;
+}
+.logo-text .logo-main {
+  font-family: 'Noto Serif SC', serif; font-size: 19px; font-weight: 700;
+  color: var(--orange-dk); line-height: 1.2;
+}
+body.lang-jp .logo-text .logo-main { font-family: 'Noto Serif JP', serif; }
+.logo-text .logo-sub { font-size: 10px; color: var(--gray-400); letter-spacing: 1px; margin-top: 2px; }
+
+.header-actions { display: flex; align-items: center; gap: 12px; }
+.tel-wrap { text-align: right; }
+.tel-wrap .tel { font-size: 18px; font-weight: 700; color: var(--orange-dk); letter-spacing: .5px; }
+.tel-wrap .tel-lbl { font-size: 10px; color: var(--gray-400); }
+
+.btn-reserve {
+  background: var(--orange);
+  color: #fff; border: none; padding: 10px 18px; border-radius: 5px;
+  font-size: 13px; font-weight: 600; cursor: pointer;
+  display: flex; align-items: center; gap: 6px;
+  font-family: inherit; white-space: nowrap;
+  transition: background .2s;
+}
+.btn-reserve:hover { background: var(--orange-dk); }
+
+.btn-lang {
+  background: var(--white);
+  border: 1.5px solid var(--orange);
+  color: var(--orange); padding: 8px 14px; border-radius: 5px;
+  font-size: 12px; font-weight: 600; cursor: pointer;
+  font-family: inherit; white-space: nowrap;
+  transition: all .2s; display: flex; align-items: center; gap: 4px;
+}
+.btn-lang:hover { background: var(--orange); color: #fff; }
+
+/* ===== NAV ===== */
+.nav { background: var(--orange-dk); }
+.nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; max-width: 1080px; margin: 0 auto; }
+.nav ul li a {
+  display: block; color: rgba(255,255,255,.88);
+  padding: 11px 16px; font-size: 13px; font-weight: 500;
+  transition: background .2s; white-space: nowrap;
+}
+.nav ul li a:hover { background: rgba(0,0,0,.18); color: #fff; }
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, #c4561a 0%, #e86b1f 50%, #f5a060 100%);
+  min-height: 420px; display: flex; align-items: center;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero::after {
+  content: '🏠'; position: absolute; right: 80px; top: 50%;
+  transform: translateY(-50%); font-size: 180px; opacity: .1;
+  line-height: 1;
+}
+.hero-content { position: relative; z-index: 2; padding: 56px 24px 56px 60px; max-width: 620px; }
+.hero-badge {
+  display: inline-block; border: 1px solid rgba(255,255,255,.4);
+  color: rgba(255,255,255,.92); font-size: 11px; padding: 5px 16px;
+  border-radius: 20px; letter-spacing: 2px; margin-bottom: 18px;
+}
+.hero-h1 {
+  font-family: 'Noto Serif SC', serif; font-size: 32px; font-weight: 700;
+  color: #fff; line-height: 1.5; margin-bottom: 14px;
+  text-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+body.lang-jp .hero-h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; }
+.hero-h1 em { color: #fff9c4; font-style: normal; }
+.hero-p { color: rgba(255,255,255,.88); font-size: 14px; line-height: 2; margin-bottom: 26px; }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-btn-main {
+  background: #fff; color: var(--orange-dk);
+  padding: 13px 26px; border-radius: 5px; font-size: 14px; font-weight: 700;
+  transition: opacity .2s; display: inline-block;
+}
+.hero-btn-main:hover { opacity: .9; }
+.hero-btn-sub {
+  border: 1.5px solid rgba(255,255,255,.65); color: #fff;
+  padding: 12px 22px; border-radius: 5px; font-size: 13px;
+  transition: background .2s; display: inline-block;
+}
+.hero-btn-sub:hover { background: rgba(255,255,255,.15); }
+.hero-stats {
+  position: absolute; bottom: 0; right: 0;
+  display: flex; background: rgba(0,0,0,.3);
+}
+.hero-stat { padding: 14px 22px; text-align: center; border-left: 1px solid rgba(255,255,255,.15); }
+.hero-stat:first-child { border-left: none; }
+.stat-num { font-size: 21px; font-weight: 700; color: #fff9c4; }
+.stat-lbl { font-size: 10px; color: rgba(255,255,255,.7); margin-top: 1px; }
+
+/* ===== NEWS BAND ===== */
+.news-band {
+  background: var(--orange-bg); border-top: 1px solid #f5cca8;
+  border-bottom: 1px solid #f5cca8;
+}
+.news-inner { display: flex; align-items: stretch; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.news-lbl {
+  background: var(--orange); color: #fff; font-size: 12px;
+  padding: 0 18px; display: flex; align-items: center;
+  white-space: nowrap; min-height: 46px; font-weight: 600;
+}
+.news-scroll { padding: 8px 18px; flex: 1; }
+.news-row { display: flex; align-items: center; gap: 10px; padding: 3px 0; font-size: 13px; }
+.news-date { color: var(--gray-400); font-size: 11px; white-space: nowrap; }
+.news-tag {
+  font-size: 10px; background: #fff; color: var(--orange);
+  border: 1px solid var(--orange-lt); padding: 1px 7px; border-radius: 3px; white-space: nowrap;
+}
+.news-row a { color: var(--orange-dk); }
+.news-row a:hover { text-decoration: underline; }
+
+/* ===== WORDPRESS-STYLE MAIN LAYOUT ===== */
+.wp-layout { display: grid; grid-template-columns: 1fr 300px; gap: 36px; align-items: start; }
+@media(max-width: 900px) { .wp-layout { grid-template-columns: 1fr; } }
+
+/* MAIN CONTENT */
+.wp-main {}
+
+/* SIDEBAR */
+.wp-sidebar {}
+.sidebar-widget {
+  background: var(--white); border: 1px solid var(--gray-200);
+  border-top: 3px solid var(--orange);
+  border-radius: 0 0 6px 6px;
+  margin-bottom: 24px; overflow: hidden;
+}
+.sidebar-widget-title {
+  background: var(--gray-50); padding: 12px 18px;
+  font-size: 13px; font-weight: 700; color: var(--orange-dk);
+  border-bottom: 1px solid var(--gray-200);
+}
+.sidebar-widget-body { padding: 16px 18px; }
+
+/* Sidebar links */
+.sidebar-links { list-style: none; }
+.sidebar-links li { border-bottom: 1px solid var(--gray-100); }
+.sidebar-links li:last-child { border-bottom: none; }
+.sidebar-links li a {
+  display: flex; align-items: center; gap: 6px;
+  padding: 9px 0; font-size: 13px; color: var(--text);
+  transition: color .15s;
+}
+.sidebar-links li a::before { content: '›'; color: var(--orange); font-size: 16px; font-weight: 700; }
+.sidebar-links li a:hover { color: var(--orange); }
+
+/* Sidebar CTA */
+.sidebar-cta {
+  background: linear-gradient(135deg, var(--orange), var(--orange-dk));
+  padding: 20px; text-align: center; border-radius: 6px;
+  margin-bottom: 24px;
+}
+.sidebar-cta h4 {
+  font-family: 'Noto Serif SC', serif; font-size: 16px;
+  color: #fff; margin-bottom: 8px;
+}
+body.lang-jp .sidebar-cta h4 { font-family: 'Noto Serif JP', serif; }
+.sidebar-cta p { font-size: 12px; color: rgba(255,255,255,.85); margin-bottom: 14px; line-height: 1.7; }
+.sidebar-cta-btn {
+  display: block; background: #fff; color: var(--orange-dk);
+  padding: 10px 18px; border-radius: 4px; font-size: 13px; font-weight: 700;
+  transition: opacity .2s;
+}
+.sidebar-cta-btn:hover { opacity: .9; }
+
+/* Sidebar tel */
+.sidebar-tel { text-align: center; padding: 4px 0; }
+.sidebar-tel .st-store { font-size: 11px; color: var(--gray-600); font-weight: 600; margin-bottom: 2px; }
+.sidebar-tel .st-num { font-size: 17px; font-weight: 700; color: var(--orange-dk); letter-spacing: .5px; }
+.sidebar-tel .st-num a { color: inherit; }
+.sidebar-tel .st-free { font-size: 10px; color: var(--gray-400); }
+.sidebar-tel-divider { border: none; border-top: 1px solid var(--gray-100); margin: 10px 0; }
+
+/* ===== PROPERTIES ===== */
+.prop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+.prop-card {
+  border: 1px solid var(--gray-200); border-radius: 6px;
+  overflow: hidden; transition: transform .2s, box-shadow .2s;
+  display: block; color: inherit; background: var(--white);
+}
+.prop-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.prop-img {
+  height: 170px; background: linear-gradient(135deg, #fde8d0, #f5c8a0);
+  position: relative; display: flex; align-items: center;
+  justify-content: center; font-size: 48px; color: var(--orange);
+}
+.prop-flag {
+  position: absolute; top: 10px; left: 10px;
+  background: var(--orange); color: #fff;
+  font-size: 11px; padding: 3px 9px; border-radius: 3px; font-weight: 600;
+}
+.prop-flag.tokka { background: #c0392b; }
+.prop-body { padding: 14px; }
+.prop-kind {
+  display: inline-block; font-size: 11px;
+  background: var(--orange-bg); color: var(--orange);
+  border: 1px solid var(--orange-lt); padding: 2px 8px;
+  border-radius: 3px; margin-bottom: 7px;
+}
+.prop-name { font-size: 14px; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+.prop-loc { font-size: 12px; color: var(--gray-400); margin-bottom: 10px; }
+.prop-price { font-size: 22px; font-weight: 700; color: #c0392b; }
+.prop-price-unit { font-size: 12px; color: var(--gray-400); font-weight: 400; margin-left: 2px; }
+.prop-meta {
+  display: flex; gap: 14px; margin-top: 9px; padding-top: 9px;
+  border-top: 1px solid var(--gray-100); font-size: 12px; color: var(--gray-600);
+}
+.prop-meta span strong { display: block; font-size: 13px; color: var(--gray-800); font-weight: 600; }
+.view-all { text-align: center; margin-top: 30px; }
+.btn-orange {
+  display: inline-block; background: var(--orange); color: #fff;
+  padding: 12px 32px; border-radius: 4px; font-size: 14px;
+  font-weight: 600; transition: background .2s;
+}
+.btn-orange:hover { background: var(--orange-dk); }
+.btn-outline-orange {
+  display: inline-block; border: 2px solid var(--orange); color: var(--orange);
+  padding: 11px 28px; border-radius: 4px; font-size: 14px;
+  font-weight: 600; transition: all .2s;
+}
+.btn-outline-orange:hover { background: var(--orange); color: #fff; }
+
+/* ===== SERVICES (purchase / sell) ===== */
+.service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media(max-width: 640px) { .service-grid { grid-template-columns: 1fr; } }
+.service-card {
+  border: 1px solid var(--gray-200); border-radius: 8px;
+  overflow: hidden; background: var(--white);
+}
+.service-card-head {
+  background: var(--orange); padding: 20px 22px;
+  display: flex; align-items: center; gap: 12px;
+}
+.service-card-head .sc-icon { font-size: 28px; }
+.service-card-head h3 { font-family: 'Noto Serif SC', serif; font-size: 18px; color: #fff; font-weight: 700; }
+body.lang-jp .service-card-head h3 { font-family: 'Noto Serif JP', serif; }
+.service-card-head.sell { background: var(--brown); }
+.service-card-body { padding: 18px 22px; }
+.service-card-body p { font-size: 13px; color: var(--gray-600); line-height: 1.9; margin-bottom: 14px; }
+.service-links { list-style: none; }
+.service-links li { border-bottom: 1px solid var(--gray-100); }
+.service-links li:last-child { border-bottom: none; }
+.service-links li a {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 0; font-size: 13px; color: var(--text); transition: color .15s;
+}
+.service-links li a::before { content: '›'; color: var(--orange); font-size: 16px; font-weight: 700; }
+.service-links li a:hover { color: var(--orange); }
+
+/* ===== DIAGNOSIS (SHINDAN) ===== */
+.shindan-intro { max-width: 580px; margin: 0 auto 36px; text-align: center; color: var(--gray-600); font-size: 14px; line-height: 1.9; }
+.shindan-box {
+  max-width: 680px; margin: 0 auto;
+  background: var(--white); border-radius: 8px;
+  box-shadow: var(--shadow-lg); overflow: hidden;
+  border: 1px solid var(--gray-200);
+}
+.shindan-progress { background: var(--gray-50); padding: 18px 30px 14px; border-bottom: 1px solid var(--gray-200); }
+.prog-bar-wrap { height: 5px; background: var(--gray-200); border-radius: 3px; overflow: hidden; margin-bottom: 12px; }
+.prog-bar { height: 100%; background: var(--orange); border-radius: 3px; transition: width .4s ease; }
+.prog-dots { display: flex; justify-content: space-between; }
+.prog-dot {
+  width: 26px; height: 26px; border-radius: 50%;
+  border: 2px solid var(--gray-200); background: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; color: var(--gray-400); transition: all .3s; font-weight: 600;
+}
+.prog-dot.active { border-color: var(--orange); background: var(--orange); color: #fff; }
+.prog-dot.done { border-color: var(--orange); background: var(--orange); color: #fff; }
+.shindan-body { padding: 28px 30px; }
+.step-panel { display: none; }
+.step-panel.active { display: block; }
+.step-q {
+  font-family: 'Noto Serif SC', serif; font-size: 17px;
+  font-weight: 700; color: var(--orange-dk); margin-bottom: 5px;
+}
+body.lang-jp .step-q { font-family: 'Noto Serif JP', serif; }
+.step-hint { font-size: 12px; color: var(--gray-400); margin-bottom: 20px; }
+.opt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.opt-btn {
+  background: var(--gray-50); border: 2px solid var(--gray-200);
+  border-radius: 7px; padding: 14px 12px; cursor: pointer;
+  text-align: left; transition: all .2s; font-family: inherit; width: 100%;
+}
+.opt-btn:hover { border-color: var(--orange); background: var(--orange-bg); }
+.opt-btn.selected { border-color: var(--orange); background: var(--orange-bg); }
+.opt-icon { font-size: 20px; margin-bottom: 5px; display: block; }
+.opt-label { font-size: 13px; font-weight: 600; color: var(--gray-800); display: block; }
+.opt-sub { font-size: 11px; color: var(--gray-400); margin-top: 2px; display: block; }
+.step-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 24px; }
+.step-back {
+  background: none; border: 1px solid var(--gray-200); color: var(--gray-600);
+  padding: 10px 18px; border-radius: 4px; cursor: pointer; font-size: 13px; font-family: inherit;
+}
+.step-back:hover { background: var(--gray-50); }
+.step-next {
+  background: var(--orange); color: #fff; border: none;
+  padding: 11px 26px; border-radius: 4px; cursor: pointer;
+  font-size: 14px; font-weight: 600; font-family: inherit; transition: background .2s;
+}
+.step-next:hover { background: var(--orange-dk); }
+.step-next:disabled { background: var(--gray-200); cursor: not-allowed; }
+.result-panel { display: none; padding: 28px 30px; }
+.result-panel.active { display: block; }
+.result-header { text-align: center; margin-bottom: 22px; }
+.result-icon { font-size: 40px; margin-bottom: 8px; }
+.result-title { font-family: 'Noto Serif SC', serif; font-size: 20px; color: var(--orange-dk); margin-bottom: 4px; }
+body.lang-jp .result-title { font-family: 'Noto Serif JP', serif; }
+.result-sub { font-size: 12px; color: var(--gray-400); line-height: 1.6; }
+.result-cards { display: grid; gap: 10px; margin-bottom: 20px; }
+.result-card {
+  border-left: 4px solid var(--orange); background: var(--orange-bg);
+  padding: 13px 16px; border-radius: 0 6px 6px 0;
+}
+.result-card.warn { border-color: #e67e22; background: #fdf6ee; }
+.result-card-title { font-size: 13px; font-weight: 700; color: var(--orange-dk); margin-bottom: 4px; }
+.result-card.warn .result-card-title { color: #c0600a; }
+.result-card p { font-size: 13px; color: var(--gray-600); line-height: 1.8; }
+.result-cta { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; padding-top: 18px; border-top: 1px solid var(--gray-100); }
+.cta-reserve {
+  background: var(--orange); color: #fff;
+  padding: 12px 24px; border-radius: 5px; font-size: 14px;
+  font-weight: 700; cursor: pointer; border: none; font-family: inherit;
+}
+.cta-reserve:hover { background: var(--orange-dk); }
+.cta-restart {
+  background: none; border: 1.5px solid var(--orange); color: var(--orange);
+  padding: 11px 20px; border-radius: 5px; font-size: 13px;
+  cursor: pointer; font-family: inherit;
+}
+.cta-restart:hover { background: var(--orange-bg); }
+
+/* ===== FLOW ===== */
+.flow-steps {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px; background: var(--gray-200);
+}
+.flow-step { background: var(--white); padding: 26px 16px; text-align: center; }
+.flow-num {
+  width: 30px; height: 30px; background: var(--orange); color: #fff;
+  border-radius: 50%; font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 10px;
+}
+.flow-icon { font-size: 24px; margin-bottom: 8px; }
+.flow-title { font-size: 13px; font-weight: 700; color: var(--orange-dk); margin-bottom: 4px; }
+.flow-desc { font-size: 11px; color: var(--gray-600); line-height: 1.7; }
+
+/* ===== LOAN ===== */
+.loan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media(max-width: 640px) { .loan-grid { grid-template-columns: 1fr; } }
+.loan-card {
+  background: var(--white); border: 1px solid var(--gray-200);
+  border-radius: 6px; padding: 20px; border-top: 4px solid var(--orange);
+}
+.loan-card-title { font-size: 14px; font-weight: 700; color: var(--orange-dk); margin-bottom: 10px; }
+.loan-card p, .loan-card li { font-size: 13px; color: var(--gray-600); line-height: 1.85; }
+.loan-card ul { list-style: none; padding: 0; }
+.loan-card ul li { padding: 2px 0; }
+.loan-card ul li::before { content: '✓ '; color: var(--orange); font-weight: 700; }
+.loan-note {
+  background: #fffbea; border: 1px solid #f0d880; border-radius: 6px;
+  padding: 14px 16px; margin-top: 18px; font-size: 13px; color: #7a6010;
+  display: flex; gap: 8px; align-items: flex-start;
+}
+
+/* ===== CONTACT CTA BAND ===== */
+.contact-band {
+  background: linear-gradient(135deg, #c4561a 0%, #e86b1f 100%);
+  padding: 52px 24px; text-align: center;
+}
+.contact-band h2 {
+  font-family: 'Noto Serif SC', serif; font-size: 24px; color: #fff;
+  margin-bottom: 10px;
+}
+body.lang-jp .contact-band h2 { font-family: 'Noto Serif JP', serif; }
+.contact-band p { color: rgba(255,255,255,.85); font-size: 14px; margin-bottom: 28px; line-height: 2; }
+.contact-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.contact-btn-main {
+  background: #fff; color: var(--orange-dk);
+  padding: 14px 30px; border-radius: 5px; font-size: 15px;
+  font-weight: 700; display: inline-block; transition: opacity .2s;
+}
+.contact-btn-main:hover { opacity: .9; }
+.contact-btn-sub {
+  border: 1.5px solid rgba(255,255,255,.7); color: #fff;
+  padding: 13px 24px; border-radius: 5px; font-size: 14px;
+  display: inline-block; transition: background .2s;
+}
+.contact-btn-sub:hover { background: rgba(255,255,255,.12); }
+
+/* ===== COMPANY ===== */
+.company-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 36px; align-items: start; }
+@media(max-width: 768px) { .company-grid { grid-template-columns: 1fr; } }
+.company-about h3 {
+  font-family: 'Noto Serif SC', serif; font-size: 18px; color: var(--orange-dk);
+  margin-bottom: 12px;
+}
+body.lang-jp .company-about h3 { font-family: 'Noto Serif JP', serif; }
+.company-about p { font-size: 14px; color: var(--gray-600); line-height: 1.95; margin-bottom: 10px; }
+.company-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.company-table th, .company-table td { padding: 9px 12px; border: 1px solid var(--gray-200); text-align: left; vertical-align: top; }
+.company-table th { background: var(--gray-50); color: var(--gray-600); font-weight: 600; width: 32%; white-space: nowrap; }
+.license-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--orange-bg); border: 1px solid var(--orange-lt);
+  color: var(--orange-dk); padding: 7px 14px; border-radius: 4px;
+  font-size: 12px; margin-top: 12px;
+}
+
+/* Stores tab */
+.stores-tabs { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 20px; }
+.store-tab-btn {
+  background: var(--gray-100); border: 1px solid var(--gray-200);
+  color: var(--gray-600); padding: 7px 14px; border-radius: 4px;
+  font-size: 12px; cursor: pointer; font-family: inherit; transition: all .2s;
+}
+.store-tab-btn.active { background: var(--orange); border-color: var(--orange); color: #fff; }
+.store-panel { display: none; }
+.store-panel.active { display: block; }
+.store-info { font-size: 13px; color: var(--gray-600); line-height: 1.9; }
+.store-info .si-tel { font-size: 16px; font-weight: 700; color: var(--orange-dk); margin: 6px 0; }
+
+/* ===== FOOTER ===== */
+footer { background: #3a2010; color: rgba(255,255,255,.7); font-size: 12px; }
+.footer-main {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 24px;
+  padding: 40px 24px 24px; max-width: 1080px; margin: 0 auto;
+}
+@media(max-width: 768px) { .footer-main { grid-template-columns: 1fr 1fr; } }
+@media(max-width: 480px) { .footer-main { grid-template-columns: 1fr; } }
+.foot-logo { font-family: 'Noto Serif SC', serif; font-size: 17px; color: #fff; margin-bottom: 6px; }
+body.lang-jp .foot-logo { font-family: 'Noto Serif JP', serif; }
+.footer-brand p { color: rgba(255,255,255,.5); font-size: 12px; line-height: 1.8; }
+.foot-col h4 { color: #f5c8a0; font-size: 12px; font-weight: 600; margin-bottom: 10px; letter-spacing: .5px; }
+.foot-col ul { list-style: none; }
+.foot-col ul li { padding: 3px 0; }
+.foot-col ul li a { color: rgba(255,255,255,.6); font-size: 12px; }
+.foot-col ul li a:hover { color: #fff; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  text-align: center; padding: 14px 24px;
+  color: rgba(255,255,255,.3); font-size: 11px;
+}
+
+/* ===== RESERVE MODAL ===== */
+.modal-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.55); z-index: 1000;
+  align-items: center; justify-content: center;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: var(--white); border-radius: 10px;
+  padding: 36px; max-width: 480px; width: 90%;
+  box-shadow: 0 20px 60px rgba(0,0,0,.3);
+  position: relative;
+}
+.modal-close {
+  position: absolute; top: 14px; right: 16px;
+  background: none; border: none; font-size: 22px;
+  color: var(--gray-400); cursor: pointer;
+}
+.modal-title {
+  font-family: 'Noto Serif SC', serif; font-size: 20px;
+  color: var(--orange-dk); margin-bottom: 6px; text-align: center;
+}
+body.lang-jp .modal-title { font-family: 'Noto Serif JP', serif; }
+.modal-sub { font-size: 12px; color: var(--gray-400); text-align: center; margin-bottom: 22px; }
+.form-row { margin-bottom: 14px; }
+.form-row label { display: block; font-size: 12px; font-weight: 600; color: var(--gray-600); margin-bottom: 5px; }
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%; padding: 10px 12px; border: 1.5px solid var(--gray-200);
+  border-radius: 5px; font-size: 14px; font-family: inherit;
+  transition: border-color .2s; outline: none; color: var(--text);
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+  border-color: var(--orange);
+}
+.form-row textarea { height: 80px; resize: vertical; }
+.form-submit {
+  width: 100%; background: var(--orange); color: #fff; border: none;
+  padding: 13px; border-radius: 5px; font-size: 15px; font-weight: 700;
+  cursor: pointer; font-family: inherit; transition: background .2s; margin-top: 6px;
+}
+.form-submit:hover { background: var(--orange-dk); }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 768px) {
+  .header-inner { padding: 10px 14px; }
+  .tel-wrap { display: none; }
+  .hero-content { padding: 36px 16px; }
+  .hero-h1 { font-size: 23px; }
+  .hero-stats { position: static; background: rgba(0,0,0,.35); }
+  .hero { flex-direction: column; min-height: auto; }
+  .hero::after { display: none; }
+  .shindan-body { padding: 20px 18px; }
+  .shindan-progress { padding: 14px 18px; }
+  .opt-grid { grid-template-columns: 1fr; }
+  .topbar { display: none; }
+}
+@media(max-width: 480px) {
+  .hero-btns { flex-direction: column; }
+  .contact-btns { flex-direction: column; align-items: center; }
 }
 </style>
 </head>
@@ -219,25 +601,41 @@ footer{background:#162820;color:rgba(255,255,255,.7);font-size:12px}
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <a href="#wechat">💬 微信咨询</a>
-  <a href="#shindan">📋 购房诊断</a>
-  <a href="#company">🏢 公司介绍</a>
+  <a href="#properties"><span class="cn">🏠 最新物件</span><span class="jp">🏠 最新物件</span></a>
+  <a href="#shindan"><span class="cn">📋 购房诊断</span><span class="jp">📋 購入診断</span></a>
+  <a href="#contact-band"><span class="cn">📞 联系我们</span><span class="jp">📞 お問合せ</span></a>
+  <a href="#company"><span class="cn">🏢 公司介绍</span><span class="jp">🏢 会社案内</span></a>
 </div>
 
 <!-- HEADER -->
 <header class="header">
   <div class="header-inner">
     <div class="logo-wrap">
-      <div class="logo-jp">Nexcess 不動産</div>
-      <div class="logo-cn">在日华人不动产购买服务</div>
+      <div class="logo-icon">🏡</div>
+      <div class="logo-text">
+        <div class="logo-main">
+          <span class="cn">イエステーション くらしあ</span>
+          <span class="jp">イエステーション くらしあ</span>
+        </div>
+        <div class="logo-sub">
+          <span class="cn">在日华人不动产购买服务 ｜ 千叶县旭市・銚子市・匝瑳市</span>
+          <span class="jp">千葉県旭市・銚子市・匝瑳市の不動産売買</span>
+        </div>
+      </div>
     </div>
     <div class="header-actions">
-      <div class="tel-block">
-        <div class="tel">045-XXX-XXXX</div>
-        <div class="tel-lbl">9:00〜18:00（中文对应）</div>
+      <div class="tel-wrap">
+        <div class="tel">0120-755-506</div>
+        <div class="tel-lbl">
+          <span class="cn">旭店 / 9:00〜18:00（中文対応）</span>
+          <span class="jp">旭店 / 9:00〜18:00</span>
+        </div>
       </div>
-      <button class="wechat-btn" onclick="document.getElementById('wechat').scrollIntoView({behavior:'smooth'})">
-        💬 微信咨询
+      <button class="btn-reserve" onclick="openModal()">
+        📅 <span class="cn">来店预约</span><span class="jp">来店予約</span>
+      </button>
+      <button class="btn-lang" id="langBtn" onclick="toggleLang()">
+        🌐 <span id="langBtnLabel">日本語</span>
       </button>
     </div>
   </div>
@@ -246,110 +644,287 @@ footer{background:#162820;color:rgba(255,255,255,.7);font-size:12px}
 <!-- NAV -->
 <nav class="nav">
   <ul>
-    <li><a href="#properties">🏠 最新物件</a></li>
-    <li><a href="#shindan">📋 购房诊断</a></li>
-    <li><a href="#flow">📝 购房流程</a></li>
-    <li><a href="#loan">💴 贷款说明</a></li>
-    <li><a href="#wechat">💬 微信联系</a></li>
-    <li><a href="#company">🏢 公司介绍</a></li>
+    <li><a href="#properties"><span class="cn">🏠 最新物件</span><span class="jp">🏠 最新物件</span></a></li>
+    <li><a href="#services"><span class="cn">📌 购买/卖出</span><span class="jp">📌 購入・売却</span></a></li>
+    <li><a href="#shindan"><span class="cn">📋 购房诊断</span><span class="jp">📋 購入診断</span></a></li>
+    <li><a href="#flow"><span class="cn">📝 购房流程</span><span class="jp">📝 購入の流れ</span></a></li>
+    <li><a href="#loan"><span class="cn">💴 贷款说明</span><span class="jp">💴 ローン説明</span></a></li>
+    <li><a href="#company"><span class="cn">🏢 公司介绍</span><span class="jp">🏢 会社案内</span></a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">在日华人不动产购买 专门窗口</div>
-    <h1 class="hero-h1">在日本购买房产<br>我们用<em>中文</em>全程支持</h1>
-    <p class="hero-p">从选房、贷款咨询、合同签署到交房，所有手续均可中文对应。<br>了解在日中国人购房的独特注意事项，安心踏出第一步。</p>
+    <div class="hero-badge">
+      <span class="cn">在日华人不动产购买 专门窗口</span>
+      <span class="jp">在日中国人向け 不動産購入専門窓口</span>
+    </div>
+    <h1 class="hero-h1">
+      <span class="cn">在<em>千叶县</em>购买房产<br>我们用<em>中文</em>全程支持</span>
+      <span class="jp">千葉県の不動産購入を<br><em>中国語</em>でサポートします</span>
+    </h1>
+    <p class="hero-p">
+      <span class="cn">从选房、贷款咨询、合同签署到交房，全程中文对应。<br>旭市・銚子市・匝瑳市エリアに特化した物件情報を多数ご用意。</span>
+      <span class="jp">物件探しからローン相談、契約、引渡しまで中国語でフルサポート。<br>旭市・銚子市・匝瑳市エリアの豊富な物件情報をご提供します。</span>
+    </p>
     <div class="hero-btns">
-      <a href="#shindan" class="hero-btn-main">📋 免费购房诊断（约3分钟）</a>
-      <a href="#flow" class="hero-btn-sub">购房流程介绍</a>
+      <a href="#shindan" class="hero-btn-main">
+        <span class="cn">📋 免费购房诊断（约3分钟）</span>
+        <span class="jp">📋 無料購入診断（約3分）</span>
+      </a>
+      <a href="#flow" class="hero-btn-sub">
+        <span class="cn">购房流程介绍</span>
+        <span class="jp">購入の流れを見る</span>
+      </a>
     </div>
   </div>
   <div class="hero-stats">
-    <div class="hero-stat"><div class="stat-num">中文</div><div class="stat-lbl">全程对应</div></div>
-    <div class="hero-stat"><div class="stat-num">無料</div><div class="stat-lbl">咨询免费</div></div>
-    <div class="hero-stat"><div class="stat-num">WeChat</div><div class="stat-lbl">即時対応</div></div>
+    <div class="hero-stat">
+      <div class="stat-num"><span class="cn">中文</span><span class="jp">中国語</span></div>
+      <div class="stat-lbl"><span class="cn">全程对应</span><span class="jp">全対応</span></div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-num"><span class="cn">免费</span><span class="jp">無料</span></div>
+      <div class="stat-lbl"><span class="cn">咨询免费</span><span class="jp">ご相談無料</span></div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-num">8店舗</div>
+      <div class="stat-lbl"><span class="cn">千叶县内</span><span class="jp">千葉県内</span></div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-num"><span class="cn">年中</span><span class="jp">年中</span></div>
+      <div class="stat-lbl"><span class="cn">年中无休</span><span class="jp">無休</span></div>
+    </div>
   </div>
 </section>
 
 <!-- NEWS BAND -->
 <div class="news-band">
   <div class="news-inner">
-    <div class="news-lbl">最新物件</div>
+    <div class="news-lbl"><span class="cn">最新物件</span><span class="jp">新着物件</span></div>
     <div class="news-scroll">
-      <div class="news-row"><span class="news-date">2026.04.21</span><span class="news-tag">中古戸建</span><a href="#">横浜市鶴見区 3LDK 2,480万円 新着</a></div>
-      <div class="news-row"><span class="news-date">2026.04.18</span><span class="news-tag">マンション</span><a href="#">川崎市中原区 2LDK 3,200万円 特価</a></div>
-      <div class="news-row"><span class="news-date">2026.04.15</span><span class="news-tag">土地</span><a href="#">横浜市港北区 110㎡ 1,950万円</a></div>
+      <div class="news-row">
+        <span class="news-date">2026.04.21</span>
+        <span class="news-tag"><span class="cn">中古独栋</span><span class="jp">中古戸建</span></span>
+        <a href="#"><span class="cn">東金市家之子 中古戸建 4LDK 648万円 新着</span><span class="jp">東金市家之子 中古戸建 4LDK 648万円 新着</span></a>
+      </div>
+      <div class="news-row">
+        <span class="news-date">2026.04.21</span>
+        <span class="news-tag"><span class="cn">中古独栋</span><span class="jp">中古戸建</span></span>
+        <a href="#"><span class="cn">銚子市幸町 中古戸建 5DK 178万円 新着</span><span class="jp">銚子市幸町 中古戸建 5DK 178万円 新着</span></a>
+      </div>
+      <div class="news-row">
+        <span class="news-date">2026.04.21</span>
+        <span class="news-tag"><span class="cn">中古独栋</span><span class="jp">中古戸建</span></span>
+        <a href="#"><span class="cn">香取市昭和町 中古戸建 5LDK 1,030万円 新着</span><span class="jp">香取市昭和町 中古戸建 5LDK 1,030万円 新着</span></a>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- PROPERTIES -->
-<section class="sec" id="properties">
+<!-- MAIN CONTENT + SIDEBAR -->
+<section class="sec sec-bg2" id="properties">
   <div class="container">
     <p class="sec-en">NEW PROPERTIES</p>
-    <h2 class="sec-title">最新推荐物件</h2>
+    <h2 class="sec-title"><span class="cn">最新推荐物件</span><span class="jp">最新おすすめ物件</span></h2>
     <div class="sec-bar"></div>
-    <div class="prop-grid">
-      <a href="#" class="prop-card">
-        <div class="prop-img">🏠<span class="prop-flag">NEW</span></div>
-        <div class="prop-body">
-          <span class="prop-kind">中古戸建</span>
-          <div class="prop-name">横浜市鶴見区 3LDK 一戸建</div>
-          <div class="prop-loc">📍 鶴見駅 徒歩12分</div>
-          <div class="prop-price">2,480<span class="prop-price-unit">万円</span></div>
-          <div class="prop-meta">
-            <span><strong>3LDK</strong>间取</span>
-            <span><strong>82.6㎡</strong>建筑</span>
-            <span><strong>97㎡</strong>土地</span>
+    <div class="wp-layout">
+      <!-- MAIN -->
+      <div class="wp-main">
+        <div class="prop-grid">
+          <a href="#" class="prop-card">
+            <div class="prop-img">🏠<span class="prop-flag"><span class="cn">新着</span><span class="jp">新着</span></span></div>
+            <div class="prop-body">
+              <span class="prop-kind"><span class="cn">中古独栋</span><span class="jp">中古戸建</span></span>
+              <div class="prop-name"><span class="cn">銚子市幸町 中古戸建 5DK</span><span class="jp">銚子市幸町 中古戸建 5DK</span></div>
+              <div class="prop-loc">📍 <span class="cn">銚子站 步行15分</span><span class="jp">銚子駅 徒歩15分</span></div>
+              <div class="prop-price">178<span class="prop-price-unit">万円</span></div>
+              <div class="prop-meta">
+                <span><strong>5DK</strong><span class="cn">间取</span><span class="jp">間取</span></span>
+                <span><strong>98㎡</strong><span class="cn">建筑</span><span class="jp">建物</span></span>
+                <span><strong>130㎡</strong><span class="cn">土地</span><span class="jp">土地</span></span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="prop-card">
+            <div class="prop-img">🏡<span class="prop-flag tokka"><span class="cn">特价</span><span class="jp">特価</span></span></div>
+            <div class="prop-body">
+              <span class="prop-kind"><span class="cn">中古独栋</span><span class="jp">中古戸建</span></span>
+              <div class="prop-name"><span class="cn">旭市 中古戸建 4LDK</span><span class="jp">旭市 中古戸建 4LDK</span></div>
+              <div class="prop-loc">📍 <span class="cn">旭站 步行7分</span><span class="jp">旭駅 徒歩7分</span></div>
+              <div class="prop-price">398<span class="prop-price-unit">万円</span></div>
+              <div class="prop-meta">
+                <span><strong>4LDK</strong><span class="cn">间取</span><span class="jp">間取</span></span>
+                <span><strong>104㎡</strong><span class="cn">建筑</span><span class="jp">建物</span></span>
+                <span><strong>150㎡</strong><span class="cn">土地</span><span class="jp">土地</span></span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="prop-card">
+            <div class="prop-img">🏘️<span class="prop-flag"><span class="cn">新着</span><span class="jp">新着</span></span></div>
+            <div class="prop-body">
+              <span class="prop-kind"><span class="cn">中古独栋</span><span class="jp">中古戸建</span></span>
+              <div class="prop-name"><span class="cn">香取市昭和町 中古戸建 5LDK</span><span class="jp">香取市昭和町 中古戸建 5LDK</span></div>
+              <div class="prop-loc">📍 <span class="cn">佐原站 步行20分</span><span class="jp">佐原駅 徒歩20分</span></div>
+              <div class="prop-price">1,030<span class="prop-price-unit">万円</span></div>
+              <div class="prop-meta">
+                <span><strong>5LDK</strong><span class="cn">间取</span><span class="jp">間取</span></span>
+                <span><strong>132㎡</strong><span class="cn">建筑</span><span class="jp">建物</span></span>
+                <span><strong>210㎡</strong><span class="cn">土地</span><span class="jp">土地</span></span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="prop-card">
+            <div class="prop-img">🏠</div>
+            <div class="prop-body">
+              <span class="prop-kind"><span class="cn">中古独栋</span><span class="jp">中古戸建</span></span>
+              <div class="prop-name"><span class="cn">東金市家之子 中古戸建 4LDK</span><span class="jp">東金市家之子 中古戸建 4LDK</span></div>
+              <div class="prop-loc">📍 <span class="cn">東金站 步行13分</span><span class="jp">東金駅 徒歩13分</span></div>
+              <div class="prop-price">648<span class="prop-price-unit">万円</span></div>
+              <div class="prop-meta">
+                <span><strong>4LDK</strong><span class="cn">间取</span><span class="jp">間取</span></span>
+                <span><strong>110㎡</strong><span class="cn">建筑</span><span class="jp">建物</span></span>
+                <span><strong>170㎡</strong><span class="cn">土地</span><span class="jp">土地</span></span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="view-all">
+          <a href="#" class="btn-orange">
+            <span class="cn">查看全部物件 →</span>
+            <span class="jp">全物件を見る →</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="wp-sidebar">
+        <!-- CTA -->
+        <div class="sidebar-cta">
+          <h4><span class="cn">免费来店预约</span><span class="jp">無料来店予約</span></h4>
+          <p><span class="cn">可以用中文咨询。请随时联系我们！</span><span class="jp">中国語でご相談いただけます。お気軽にどうぞ！</span></p>
+          <a href="#" class="sidebar-cta-btn" onclick="openModal(); return false;">
+            <span class="cn">📅 预约来店</span><span class="jp">📅 来店予約する</span>
+          </a>
+        </div>
+
+        <!-- TEL -->
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">📞 <span class="cn">电话咨询</span><span class="jp">お電話でのお問合せ</span></div>
+          <div class="sidebar-widget-body">
+            <div class="sidebar-tel">
+              <div class="st-store"><span class="cn">旭店（フリーダイヤル）</span><span class="jp">旭店（フリーダイヤル）</span></div>
+              <div class="st-num"><a href="tel:0120755506">0120-755-506</a></div>
+              <div class="st-free">9:00〜18:00</div>
+            </div>
+            <hr class="sidebar-tel-divider">
+            <div class="sidebar-tel">
+              <div class="st-store"><span class="cn">銚子店</span><span class="jp">銚子店</span></div>
+              <div class="st-num"><a href="tel:0120006862">0120-006-862</a></div>
+              <div class="st-free">9:00〜18:00</div>
+            </div>
+            <hr class="sidebar-tel-divider">
+            <div class="sidebar-tel">
+              <div class="st-store"><span class="cn">東金店</span><span class="jp">東金店</span></div>
+              <div class="st-num"><a href="tel:0120001489">0120-001-489</a></div>
+              <div class="st-free">9:00〜18:00</div>
+            </div>
           </div>
         </div>
-      </a>
-      <a href="#" class="prop-card">
-        <div class="prop-img">🏢<span class="prop-flag sale">特価</span></div>
-        <div class="prop-body">
-          <span class="prop-kind">マンション</span>
-          <div class="prop-name">川崎市中原区 2LDK 分譲</div>
-          <div class="prop-loc">📍 武蔵中原駅 徒歩8分</div>
-          <div class="prop-price">3,200<span class="prop-price-unit">万円</span></div>
-          <div class="prop-meta">
-            <span><strong>2LDK</strong>间取</span>
-            <span><strong>63.4㎡</strong>専有</span>
-            <span><strong>5F/12F</strong>楼层</span>
+
+        <!-- PURCHASE MENU -->
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">🏠 <span class="cn">购买须知</span><span class="jp">購入をお考えの方</span></div>
+          <div class="sidebar-widget-body">
+            <ul class="sidebar-links">
+              <li><a href="#shindan"><span class="cn">免费购房诊断</span><span class="jp">無料購入診断</span></a></li>
+              <li><a href="#flow"><span class="cn">购房流程一览</span><span class="jp">購入の流れ</span></a></li>
+              <li><a href="#loan"><span class="cn">住房贷款说明</span><span class="jp">住宅ローン説明</span></a></li>
+              <li><a href="#"><span class="cn">在日外国人贷款指南</span><span class="jp">外国人ローンガイド</span></a></li>
+              <li><a href="#"><span class="cn">购房所需资金</span><span class="jp">購入に必要な資金</span></a></li>
+              <li><a href="#"><span class="cn">中古房翻新流程</span><span class="jp">中古物件リノベーション</span></a></li>
+            </ul>
           </div>
         </div>
-      </a>
-      <a href="#" class="prop-card">
-        <div class="prop-img">🌳<span class="prop-flag">NEW</span></div>
-        <div class="prop-body">
-          <span class="prop-kind">土地</span>
-          <div class="prop-name">横浜市港北区 宅地分譲</div>
-          <div class="prop-loc">📍 綱島駅 バス10分</div>
-          <div class="prop-price">1,950<span class="prop-price-unit">万円</span></div>
-          <div class="prop-meta">
-            <span><strong>110㎡</strong>面积</span>
-            <span><strong>第一種</strong>用途</span>
-            <span><strong>角地</strong>条件</span>
+
+        <!-- SELL MENU -->
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">💰 <span class="cn">卖房须知</span><span class="jp">売却をお考えの方</span></div>
+          <div class="sidebar-widget-body">
+            <ul class="sidebar-links">
+              <li><a href="#"><span class="cn">免费房产估价</span><span class="jp">無料査定</span></a></li>
+              <li><a href="#"><span class="cn">空屋·空地也可收购</span><span class="jp">空き家・空き地 買取</span></a></li>
+              <li><a href="#"><span class="cn">卖房时机的选择</span><span class="jp">売却のタイミング</span></a></li>
+              <li><a href="#"><span class="cn">卖房相关费用说明</span><span class="jp">売却に関わる諸費用</span></a></li>
+            </ul>
           </div>
         </div>
-      </a>
+      </aside>
     </div>
-    <div class="view-all"><a href="#" class="btn-outline-green">查看全部物件 →</a></div>
   </div>
 </section>
 
-<!-- ===== SHINDAN 購入相談診断 ===== -->
-<section class="sec shindan-sec" id="shindan">
+<!-- SERVICES -->
+<section class="sec" id="services">
   <div class="container">
-    <p class="sec-en">PURCHASE CONSULTATION</p>
-    <h2 class="sec-title">📋 免费购房诊断</h2>
+    <p class="sec-en">OUR SERVICES</p>
+    <h2 class="sec-title"><span class="cn">购买 · 出售服务</span><span class="jp">購入・売却サービス</span></h2>
     <div class="sec-bar"></div>
-    <div class="shindan-intro">
-      回答以下5个问题（约3分钟），根据您的实际情况，<br>为您提供<strong>个性化的购房建议</strong>与注意事项。
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-card-head">
+          <span class="sc-icon">🏠</span>
+          <h3><span class="cn">不动产购买</span><span class="jp">不動産購入</span></h3>
+        </div>
+        <div class="service-card-body">
+          <p>
+            <span class="cn">在日中国人购房流程复杂，语言障碍更是难题。我们提供从选房、贷款申请、合同签署到交房的全程中文支持，让您安心购买人生中最重要的资产。</span>
+            <span class="jp">在日中国人の方が不動産購入で直面する言語バリアや制度の違いに対応し、物件探しからローン申請、契約、引渡しまで中国語でサポートします。</span>
+          </p>
+          <ul class="service-links">
+            <li><a href="#shindan"><span class="cn">免费购房诊断</span><span class="jp">無料購入診断</span></a></li>
+            <li><a href="#flow"><span class="cn">购房流程</span><span class="jp">購入の流れ</span></a></li>
+            <li><a href="#loan"><span class="cn">住房贷款说明</span><span class="jp">住宅ローン説明</span></a></li>
+            <li><a href="#"><span class="cn">外国人购房注意事项</span><span class="jp">外国人購入注意事項</span></a></li>
+            <li><a href="#"><span class="cn">永住者购房须知</span><span class="jp">永住者購入のポイント</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-head sell">
+          <span class="sc-icon">💰</span>
+          <h3><span class="cn">不动产出售</span><span class="jp">不動産売却</span></h3>
+        </div>
+        <div class="service-card-body">
+          <p>
+            <span class="cn">您有需要出售的房产或空地吗？我们以独特的地区专门化优势，帮助您实现最优出售价格。空屋、空地也可直接买取，手续简便。</span>
+            <span class="jp">転勤、住み替え、相続などで売却をお考えの方。空き家・空き地もそのまま買取いたします。エリア専門だからこその豊富な情報で最適な売却を実現します。</span>
+          </p>
+          <ul class="service-links">
+            <li><a href="#"><span class="cn">免费房产估价申请</span><span class="jp">無料査定申込み</span></a></li>
+            <li><a href="#"><span class="cn">空屋·空地买取</span><span class="jp">空き家・空地 そのまま買取</span></a></li>
+            <li><a href="#"><span class="cn">出售时机</span><span class="jp">売却のタイミング</span></a></li>
+            <li><a href="#"><span class="cn">售房相关费用</span><span class="jp">売却に関わる諸費用</span></a></li>
+            <li><a href="#"><span class="cn">建筑诊断服务</span><span class="jp">建物診断サービス</span></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- SHINDAN -->
+<section class="sec sec-bg" id="shindan">
+  <div class="container">
+    <p class="sec-en">FREE DIAGNOSIS</p>
+    <h2 class="sec-title"><span class="cn">免费购房诊断</span><span class="jp">無料購入診断</span></h2>
+    <div class="sec-bar"></div>
+    <p class="shindan-intro">
+      <span class="cn">回答5个问题（约3分钟），我们将根据您的在留资格、预算和目的，提供量身定制的购房建议。完全免费，无任何强制推销。</span>
+      <span class="jp">5つの質問（約3分）に答えるだけで、在留資格・予算・目的に合わせた個別の購入アドバイスを提供します。完全無料、勧誘等は一切ありません。</span>
+    </p>
     <div class="shindan-box">
-      <!-- PROGRESS BAR -->
       <div class="shindan-progress">
         <div class="prog-bar-wrap"><div class="prog-bar" id="progBar" style="width:0%"></div></div>
         <div class="prog-dots">
@@ -358,24 +933,31 @@ footer{background:#162820;color:rgba(255,255,255,.7);font-size:12px}
           <div class="prog-dot" id="dot3">3</div>
           <div class="prog-dot" id="dot4">4</div>
           <div class="prog-dot" id="dot5">5</div>
-          <div class="prog-dot" id="dot6">✓</div>
         </div>
       </div>
 
       <!-- STEP 1 -->
       <div class="step-panel active" id="step1">
         <div class="shindan-body">
-          <div class="step-q">Q1. 您目前的在留资格是？</div>
-          <div class="step-hint">不同在留资格，贷款条件和所需文件有所不同</div>
+          <div class="step-q">
+            <span class="cn">Q1. 您目前的在留资格是？</span>
+            <span class="jp">Q1. 現在の在留資格は？</span>
+          </div>
+          <div class="step-hint">
+            <span class="cn">在留资格会影响贷款申请范围</span>
+            <span class="jp">在留資格によってローン申請可否が変わります</span>
+          </div>
           <div class="opt-grid">
-            <button class="opt-btn" onclick="selectOpt(this,1)"><span class="opt-icon">🏅</span><span class="opt-label">永住者・特別永住者</span><span class="opt-sub">贷款最有利，条件接近日本人</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,1)"><span class="opt-icon">👨‍👩‍👧</span><span class="opt-label">定住者・日本人配偶者</span><span class="opt-sub">大部分银行可申请贷款</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,1)"><span class="opt-icon">💼</span><span class="opt-label">就労ビザ（技術・人文等）</span><span class="opt-sub">贷款可能，部分银行有限制</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,1)"><span class="opt-icon">🌐</span><span class="opt-label">その他・まず確認したい</span><span class="opt-sub">先ご相談ください</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,1)"><span class="opt-icon">🌟</span><span class="opt-label"><span class="cn">永住者</span><span class="jp">永住者</span></span><span class="opt-sub"><span class="cn">条件最优</span><span class="jp">最も有利</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,1)"><span class="opt-icon">👨‍👩‍👧</span><span class="opt-label"><span class="cn">定住者・配偶者</span><span class="jp">定住者・配偶者</span></span><span class="opt-sub"><span class="cn">多数银行可申请</span><span class="jp">多くの銀行で申請可</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,1)"><span class="opt-icon">💼</span><span class="opt-label"><span class="cn">就労ビザ</span><span class="jp">就労ビザ</span></span><span class="opt-sub"><span class="cn">可申请银行范围较窄</span><span class="jp">申請できる銀行が限定</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,1)"><span class="opt-icon">📋</span><span class="opt-label"><span class="cn">其他・不确定</span><span class="jp">その他・不明</span></span><span class="opt-sub"><span class="cn">可先咨询</span><span class="jp">まずご相談ください</span></span></button>
           </div>
           <div class="step-nav">
-            <div></div>
-            <button class="step-next" id="next1" onclick="goNext(2)" disabled>下一步 →</button>
+            <span></span>
+            <button class="step-next" id="next1" onclick="goNext(2)" disabled>
+              <span class="cn">下一步 →</span><span class="jp">次へ →</span>
+            </button>
           </div>
         </div>
       </div>
@@ -383,17 +965,23 @@ footer{background:#162820;color:rgba(255,255,255,.7);font-size:12px}
       <!-- STEP 2 -->
       <div class="step-panel" id="step2">
         <div class="shindan-body">
-          <div class="step-q">Q2. 购房预算范围は？</div>
-          <div class="step-hint">含物件价格，另需准备诸费用约5〜8%</div>
+          <div class="step-q">
+            <span class="cn">Q2. 您的购房预算是多少？</span>
+            <span class="jp">Q2. ご予算はどのくらいですか？</span>
+          </div>
+          <div class="step-hint">
+            <span class="cn">包含房款及相关手续费</span>
+            <span class="jp">物件価格＋諸費用の目安</span>
+          </div>
           <div class="opt-grid">
-            <button class="opt-btn" onclick="selectOpt(this,2)"><span class="opt-icon">🏠</span><span class="opt-label">1,000万円 以下</span><span class="opt-sub">中古戸建・土地が中心</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,2)"><span class="opt-icon">🏡</span><span class="opt-label">1,000〜3,000万円</span><span class="opt-sub">戸建・マンション 豊富な選択肢</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,2)"><span class="opt-icon">🏢</span><span class="opt-label">3,000〜5,000万円</span><span class="opt-sub">都市近郊・好立地物件</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,2)"><span class="opt-icon">🌆</span><span class="opt-label">5,000万円 以上</span><span class="opt-sub">都心・駅近・新築含む</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,2)"><span class="opt-icon">🏠</span><span class="opt-label"><span class="cn">500万円以下</span><span class="jp">500万円以下</span></span><span class="opt-sub"><span class="cn">入门级物件</span><span class="jp">エントリー物件</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,2)"><span class="opt-icon">🏡</span><span class="opt-label"><span class="cn">500〜1,500万円</span><span class="jp">500〜1,500万円</span></span><span class="opt-sub"><span class="cn">标准物件</span><span class="jp">スタンダード</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,2)"><span class="opt-icon">🏘️</span><span class="opt-label"><span class="cn">1,500〜3,000万円</span><span class="jp">1,500〜3,000万円</span></span><span class="opt-sub"><span class="cn">中等物件</span><span class="jp">ミドルクラス</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,2)"><span class="opt-icon">🏰</span><span class="opt-label"><span class="cn">3,000万円以上</span><span class="jp">3,000万円以上</span></span><span class="opt-sub"><span class="cn">高端物件</span><span class="jp">プレミアム</span></span></button>
           </div>
           <div class="step-nav">
-            <button class="step-back" onclick="goBack(1)">← 返回</button>
-            <button class="step-next" id="next2" onclick="goNext(3)" disabled>下一步 →</button>
+            <button class="step-back" onclick="goBack(1)">← <span class="cn">返回</span><span class="jp">戻る</span></button>
+            <button class="step-next" id="next2" onclick="goNext(3)" disabled><span class="cn">下一步 →</span><span class="jp">次へ →</span></button>
           </div>
         </div>
       </div>
@@ -401,17 +989,23 @@ footer{background:#162820;color:rgba(255,255,255,.7);font-size:12px}
       <!-- STEP 3 -->
       <div class="step-panel" id="step3">
         <div class="shindan-body">
-          <div class="step-q">Q3. 希望的物件类型是？</div>
-          <div class="step-hint">可按生活方式和今后计划来选择</div>
+          <div class="step-q">
+            <span class="cn">Q3. 您希望购买什么类型的物件？</span>
+            <span class="jp">Q3. 希望する物件タイプは？</span>
+          </div>
+          <div class="step-hint">
+            <span class="cn">每种类型各有优缺点</span>
+            <span class="jp">それぞれメリット・デメリットがあります</span>
+          </div>
           <div class="opt-grid">
-            <button class="opt-btn" onclick="selectOpt(this,3)"><span class="opt-icon">🏠</span><span class="opt-label">中古戸建（二手独栋）</span><span class="opt-sub">价格实惠，可自由改装</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,3)"><span class="opt-icon">✨</span><span class="opt-label">新築戸建（新建独栋）</span><span class="opt-sub">全新设备，省心省力</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,3)"><span class="opt-icon">🏢</span><span class="opt-label">マンション（公寓）</span><span class="opt-sub">安全管理，便利性高</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,3)"><span class="opt-icon">🌳</span><span class="opt-label">土地のみ（地皮）</span><span class="opt-sub">自建房或投资用途</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,3)"><span class="opt-icon">🏠</span><span class="opt-label"><span class="cn">中古独栋</span><span class="jp">中古戸建</span></span><span class="opt-sub"><span class="cn">价格实惠，可自由翻新</span><span class="jp">価格安め、リフォーム自由</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,3)"><span class="opt-icon">🏢</span><span class="opt-label"><span class="cn">新房·公寓</span><span class="jp">新築・マンション</span></span><span class="opt-sub"><span class="cn">管理完善，设施齐全</span><span class="jp">管理充実、設備が新しい</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,3)"><span class="opt-icon">🌱</span><span class="opt-label"><span class="cn">土地（建房）</span><span class="jp">土地（注文住宅）</span></span><span class="opt-sub"><span class="cn">按需定制，自由设计</span><span class="jp">オーダーメイドで建築</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,3)"><span class="opt-icon">❓</span><span class="opt-label"><span class="cn">还未决定</span><span class="jp">未定</span></span><span class="opt-sub"><span class="cn">先了解情况</span><span class="jp">まず情報収集</span></span></button>
           </div>
           <div class="step-nav">
-            <button class="step-back" onclick="goBack(2)">← 返回</button>
-            <button class="step-next" id="next3" onclick="goNext(4)" disabled>下一步 →</button>
+            <button class="step-back" onclick="goBack(2)">← <span class="cn">返回</span><span class="jp">戻る</span></button>
+            <button class="step-next" id="next3" onclick="goNext(4)" disabled><span class="cn">下一步 →</span><span class="jp">次へ →</span></button>
           </div>
         </div>
       </div>
@@ -419,17 +1013,23 @@ footer{background:#162820;color:rgba(255,255,255,.7);font-size:12px}
       <!-- STEP 4 -->
       <div class="step-panel" id="step4">
         <div class="shindan-body">
-          <div class="step-q">Q4. 购房的主要目的是？</div>
-          <div class="step-hint">目的不同，物件选择和签约方式也有区别</div>
+          <div class="step-q">
+            <span class="cn">Q4. 购房目的是？</span>
+            <span class="jp">Q4. 購入の目的は？</span>
+          </div>
+          <div class="step-hint">
+            <span class="cn">目的不同，物件选择和签约方式也有区别</span>
+            <span class="jp">目的によって物件選びや契約方法が変わります</span>
+          </div>
           <div class="opt-grid">
-            <button class="opt-btn" onclick="selectOpt(this,4)"><span class="opt-icon">🏡</span><span class="opt-label">自住（自己居住）</span><span class="opt-sub">可利用住宅ローン减税</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,4)"><span class="opt-icon">📈</span><span class="opt-label">投资（出租收益）</span><span class="opt-sub">稳定租金收入，资产运用</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,4)"><span class="opt-icon">🔄</span><span class="opt-label">自住兼投资</span><span class="opt-sub">将来出租或转卖</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,4)"><span class="opt-icon">💡</span><span class="opt-label">未定・まず情報収集</span><span class="opt-sub">先了解情况，再做决定</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,4)"><span class="opt-icon">🏡</span><span class="opt-label"><span class="cn">自住</span><span class="jp">自己居住</span></span><span class="opt-sub"><span class="cn">可享住宅ローン减税</span><span class="jp">住宅ローン控除が利用可</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,4)"><span class="opt-icon">📈</span><span class="opt-label"><span class="cn">投资出租</span><span class="jp">投資・賃貸収入</span></span><span class="opt-sub"><span class="cn">稳定租金收入</span><span class="jp">安定した家賃収入</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,4)"><span class="opt-icon">🔄</span><span class="opt-label"><span class="cn">自住兼投资</span><span class="jp">自住兼投資</span></span><span class="opt-sub"><span class="cn">将来可出租或转卖</span><span class="jp">将来は賃貸・転売も</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,4)"><span class="opt-icon">💡</span><span class="opt-label"><span class="cn">先了解情况</span><span class="jp">まず情報収集</span></span><span class="opt-sub"><span class="cn">再做决定</span><span class="jp">じっくり検討したい</span></span></button>
           </div>
           <div class="step-nav">
-            <button class="step-back" onclick="goBack(3)">← 返回</button>
-            <button class="step-next" id="next4" onclick="goNext(5)" disabled>下一步 →</button>
+            <button class="step-back" onclick="goBack(3)">← <span class="cn">返回</span><span class="jp">戻る</span></button>
+            <button class="step-next" id="next4" onclick="goNext(5)" disabled><span class="cn">下一步 →</span><span class="jp">次へ →</span></button>
           </div>
         </div>
       </div>
@@ -437,17 +1037,25 @@ footer{background:#162820;color:rgba(255,255,255,.7);font-size:12px}
       <!-- STEP 5 -->
       <div class="step-panel" id="step5">
         <div class="shindan-body">
-          <div class="step-q">Q5. 住房贷款についてはどうお考えですか？</div>
-          <div class="step-hint">在日外国人も条件次第で贷款申请可能です</div>
+          <div class="step-q">
+            <span class="cn">Q5. 关于住房贷款，您如何考虑？</span>
+            <span class="jp">Q5. 住宅ローンについてはどうお考えですか？</span>
+          </div>
+          <div class="step-hint">
+            <span class="cn">在日外国人也可根据条件申请贷款</span>
+            <span class="jp">在日外国人も条件次第でローン申請が可能です</span>
+          </div>
           <div class="opt-grid">
-            <button class="opt-btn" onclick="selectOpt(this,5)"><span class="opt-icon">🏦</span><span class="opt-label">希望利用贷款</span><span class="opt-sub">首付10〜20%，需银行审查</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,5)"><span class="opt-icon">💰</span><span class="opt-label">全额现金购买</span><span class="opt-sub">无审查，手续更简便</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,5)"><span class="opt-icon">❓</span><span class="opt-label">不确定，想先了解</span><span class="opt-sub">可先进行模拟测算</span></button>
-            <button class="opt-btn" onclick="selectOpt(this,5)"><span class="opt-icon">📋</span><span class="opt-label">已有仮審査通過実績</span><span class="opt-sub">已获银行预审批准</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,5)"><span class="opt-icon">🏦</span><span class="opt-label"><span class="cn">希望申请贷款</span><span class="jp">ローン利用希望</span></span><span class="opt-sub"><span class="cn">首付10〜20%</span><span class="jp">頭金10〜20%</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,5)"><span class="opt-icon">💰</span><span class="opt-label"><span class="cn">全款购买</span><span class="jp">全額現金</span></span><span class="opt-sub"><span class="cn">无需审查，手续简便</span><span class="jp">審査不要、手続き簡単</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,5)"><span class="opt-icon">❓</span><span class="opt-label"><span class="cn">还不确定</span><span class="jp">まだ未定</span></span><span class="opt-sub"><span class="cn">先了解一下</span><span class="jp">まずシミュレーションを</span></span></button>
+            <button class="opt-btn" onclick="selectOpt(this,5)"><span class="opt-icon">✅</span><span class="opt-label"><span class="cn">已通过预审</span><span class="jp">仮審査通過済み</span></span><span class="opt-sub"><span class="cn">已获银行预批</span><span class="jp">銀行の仮承認あり</span></span></button>
           </div>
           <div class="step-nav">
-            <button class="step-back" onclick="goBack(4)">← 返回</button>
-            <button class="step-next" id="next5" onclick="showResult()" disabled>查看诊断结果 →</button>
+            <button class="step-back" onclick="goBack(4)">← <span class="cn">返回</span><span class="jp">戻る</span></button>
+            <button class="step-next" id="next5" onclick="showResult()" disabled>
+              <span class="cn">查看诊断结果 →</span><span class="jp">診断結果を見る →</span>
+            </button>
           </div>
         </div>
       </div>
@@ -456,129 +1064,179 @@ footer{background:#162820;color:rgba(255,255,255,.7);font-size:12px}
       <div class="result-panel" id="resultPanel">
         <div class="result-header">
           <div class="result-icon">✅</div>
-          <div class="result-title">诊断完成！以下是您的建议</div>
+          <div class="result-title"><span class="cn">诊断完成！以下是您的建议</span><span class="jp">診断完了！以下がご提案です</span></div>
           <div class="result-sub" id="resultSub"></div>
         </div>
         <div class="result-cards" id="resultCards"></div>
         <div class="result-cta">
-          <button class="cta-wechat" onclick="document.getElementById('wechat').scrollIntoView({behavior:'smooth'})">💬 通过微信咨询详情</button>
-          <button class="cta-restart" onclick="restartShindan()">🔄 重新诊断</button>
+          <button class="cta-reserve" onclick="openModal()">📅 <span class="cn">预约免费来店咨询</span><span class="jp">無料来店相談を予約</span></button>
+          <button class="cta-restart" onclick="restartShindan()">🔄 <span class="cn">重新诊断</span><span class="jp">やり直す</span></button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FLOW 购房流程 -->
-<section class="sec sec-bg" id="flow">
+<!-- FLOW -->
+<section class="sec sec-bg2" id="flow">
   <div class="container">
     <p class="sec-en">PURCHASE FLOW</p>
-    <h2 class="sec-title">购房流程一览</h2>
+    <h2 class="sec-title"><span class="cn">购房流程一览</span><span class="jp">購入の流れ</span></h2>
     <div class="sec-bar"></div>
     <div class="flow-steps">
-      <div class="flow-step"><div class="flow-num">1</div><div class="flow-icon">💬</div><div class="flow-title">初次咨询</div><div class="flow-desc">通过微信或电话说明需求、预算和条件。完全免费，中文对应。</div></div>
-      <div class="flow-step"><div class="flow-num">2</div><div class="flow-icon">🔍</div><div class="flow-title">物件检索・紹介</div><div class="flow-desc">根据条件检索物件，包括市场未公开的内部信息。</div></div>
-      <div class="flow-step"><div class="flow-num">3</div><div class="flow-icon">🏠</div><div class="flow-title">现场参观</div><div class="flow-desc">中文陪同内覧，无强制推销，按自己节奏确认物件状况。</div></div>
-      <div class="flow-step"><div class="flow-num">4</div><div class="flow-icon">🏦</div><div class="flow-title">贷款仮審査</div><div class="flow-desc">协助准备申请资料，比较多家银行条件，选最优方案。</div></div>
-      <div class="flow-step"><div class="flow-num">5</div><div class="flow-icon">📝</div><div class="flow-title">签订买卖合同</div><div class="flow-desc">重要事项用中文说明，签约全程有中文翻译支持。</div></div>
-      <div class="flow-step"><div class="flow-num">6</div><div class="flow-icon">🔑</div><div class="flow-title">交房・入住</div><div class="flow-desc">完成过户登记，拿到钥匙。售后咨询持续提供支持。</div></div>
+      <div class="flow-step"><div class="flow-num">1</div><div class="flow-icon">💬</div><div class="flow-title"><span class="cn">初次咨询</span><span class="jp">初回相談</span></div><div class="flow-desc"><span class="cn">通过电话或来店，用中文说明需求、预算和条件。完全免费。</span><span class="jp">お電話またはご来店にて、ご希望・予算・条件をヒアリングします。完全無料。</span></div></div>
+      <div class="flow-step"><div class="flow-num">2</div><div class="flow-icon">🔍</div><div class="flow-title"><span class="cn">物件检索</span><span class="jp">物件検索</span></div><div class="flow-desc"><span class="cn">根据条件检索物件，包括市场未公开的内部物件信息。</span><span class="jp">レインズなど豊富な情報網から条件に合う物件を探します。</span></div></div>
+      <div class="flow-step"><div class="flow-num">3</div><div class="flow-icon">🏠</div><div class="flow-title"><span class="cn">实地参观</span><span class="jp">現地見学</span></div><div class="flow-desc"><span class="cn">中文陪同内覧，无强制推销，按自己节奏确认物件状况。</span><span class="jp">中国語スタッフが内覧に同行します。無理な勧誘は一切ありません。</span></div></div>
+      <div class="flow-step"><div class="flow-num">4</div><div class="flow-icon">🏦</div><div class="flow-title"><span class="cn">贷款预审</span><span class="jp">ローン仮審査</span></div><div class="flow-desc"><span class="cn">协助准备申请资料，比较多家银行条件，选最优方案。</span><span class="jp">複数銀行の条件を比較し、最適なローンをご提案します。</span></div></div>
+      <div class="flow-step"><div class="flow-num">5</div><div class="flow-icon">📝</div><div class="flow-title"><span class="cn">签订合同</span><span class="jp">売買契約</span></div><div class="flow-desc"><span class="cn">重要事项用中文说明，签约全程有中文翻译支持。</span><span class="jp">重要事項説明を中国語で行い、安心して契約できます。</span></div></div>
+      <div class="flow-step"><div class="flow-num">6</div><div class="flow-icon">🔑</div><div class="flow-title"><span class="cn">交房入住</span><span class="jp">引渡し</span></div><div class="flow-desc"><span class="cn">完成过户登记，拿到钥匙。售后咨询持续提供支持。</span><span class="jp">所有権移転登記が完了し、鍵のお引渡しです。アフターフォローも充実。</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- LOAN 贷款说明 -->
-<section class="sec" id="loan">
+<!-- LOAN -->
+<section class="sec sec-bg" id="loan">
   <div class="container">
     <p class="sec-en">LOAN INFORMATION</p>
-    <h2 class="sec-title">在日外国人贷款说明</h2>
+    <h2 class="sec-title"><span class="cn">在日外国人贷款说明</span><span class="jp">在日外国人向け ローン説明</span></h2>
     <div class="sec-bar"></div>
     <div class="loan-grid">
       <div class="loan-card">
-        <div class="loan-card-title">🏦 贷款申请基本条件</div>
+        <div class="loan-card-title">🏦 <span class="cn">贷款申请基本条件</span><span class="jp">ローン申請の基本条件</span></div>
         <ul>
-          <li>在日本有稳定收入（受雇或自营）</li>
-          <li>在留资格有效期原则1年以上</li>
-          <li>年收入约300万円以上（因行而异）</li>
-          <li>无逾期还款记录</li>
-          <li>在日居住实绩（3年以上更有利）</li>
+          <li><span class="cn">在日本有稳定收入（受雇或自营）</span><span class="jp">日本での安定収入（給与・自営）</span></li>
+          <li><span class="cn">在留资格有效期原则1年以上</span><span class="jp">在留資格の有効期間が原則1年以上</span></li>
+          <li><span class="cn">年收入约300万円以上（因行而异）</span><span class="jp">年収約300万円以上（銀行により異なる）</span></li>
+          <li><span class="cn">无逾期还款记录</span><span class="jp">返済延滞がないこと</span></li>
+          <li><span class="cn">在日居住实绩（3年以上更有利）</span><span class="jp">在日居住実績（3年以上が有利）</span></li>
         </ul>
       </div>
       <div class="loan-card">
-        <div class="loan-card-title">📋 所需主要证明文件</div>
+        <div class="loan-card-title">📋 <span class="cn">所需主要证明文件</span><span class="jp">主な必要書類</span></div>
         <ul>
-          <li>在留卡（表里両面）</li>
-          <li>护照（パスポート）</li>
-          <li>所得証明書・源泉徴収票</li>
-          <li>住民税決定通知書</li>
-          <li>健康保険証</li>
-          <li>印鑑登録証明書</li>
+          <li><span class="cn">在留卡（正反两面）</span><span class="jp">在留カード（表裏）</span></li>
+          <li><span class="cn">护照</span><span class="jp">パスポート</span></li>
+          <li><span class="cn">所得证明书・源泉徴収票</span><span class="jp">所得証明書・源泉徴収票</span></li>
+          <li><span class="cn">住民税决定通知书</span><span class="jp">住民税決定通知書</span></li>
+          <li><span class="cn">健康保险证</span><span class="jp">健康保険証</span></li>
+          <li><span class="cn">印鑑登录证明书</span><span class="jp">印鑑登録証明書</span></li>
         </ul>
       </div>
       <div class="loan-card">
-        <div class="loan-card-title">💴 利率类型对比</div>
-        <p><strong>变动利率：</strong>目前约0.3〜1.0%。随市场波动，短期内较划算。</p>
-        <p style="margin-top:10px"><strong>固定利率：</strong>目前约1.5〜2.5%。还款额固定，便于规划家庭财务。</p>
-        <p style="margin-top:10px"><strong>固定期選択型：</strong>前N年固定后转变动，属折中方案。</p>
+        <div class="loan-card-title">💴 <span class="cn">利率类型对比</span><span class="jp">金利タイプの比較</span></div>
+        <p><strong><span class="cn">变动利率：</span><span class="jp">変動金利：</span></strong><span class="cn">目前约0.3〜1.0%。随市场波动，短期内较划算。</span><span class="jp">現在約0.3〜1.0%。市場に連動し、短期的にお得。</span></p>
+        <p style="margin-top:9px"><strong><span class="cn">固定利率：</span><span class="jp">固定金利：</span></strong><span class="cn">目前约1.5〜2.5%。还款额固定，便于规划家庭财务。</span><span class="jp">現在約1.5〜2.5%。返済額固定でライフプランが立てやすい。</span></p>
+        <p style="margin-top:9px"><strong><span class="cn">固定期选择型：</span><span class="jp">固定期間選択型：</span></strong><span class="cn">前N年固定后转变动，折中方案。</span><span class="jp">一定期間固定後に変動へ移行する折衷型。</span></p>
       </div>
       <div class="loan-card">
-        <div class="loan-card-title">📊 永住有无 vs 贷款条件</div>
-        <p><strong>有永住・特別永住：</strong>可申请几乎所有银行，利率条件与日本人相同。</p>
-        <p style="margin-top:10px"><strong>无永住（就労ビザ等）：</strong>可申请银行范围较窄，首付比例可能要求20〜30%，在留期间残余也会影响审查结果。</p>
+        <div class="loan-card-title">📊 <span class="cn">永住有无 vs 贷款条件</span><span class="jp">永住の有無とローン条件</span></div>
+        <p><strong><span class="cn">有永住・特别永住：</span><span class="jp">永住・特別永住あり：</span></strong><span class="cn">可申请几乎所有银行，利率条件与日本人相同。</span><span class="jp">ほぼ全ての銀行でローン申請が可能です。</span></p>
+        <p style="margin-top:9px"><strong><span class="cn">无永住（就労ビザ等）：</span><span class="jp">永住なし（就労ビザ等）：</span></strong><span class="cn">可申请银行范围较窄，首付比例可能要求20〜30%。</span><span class="jp">申請できる銀行が限られ、頭金20〜30%が必要な場合も。</span></p>
       </div>
     </div>
     <div class="loan-note">
       <span>⚠️</span>
-      <span>以上为一般性参考信息。贷款条件因金融机构、申请人情况、物件条件不同而有较大差异。请通过微信联系我们，进行免费的个案咨询与模拟测算。</span>
+      <span><span class="cn">以上为一般性参考信息。贷款条件因金融机构、申请人情况、物件条件不同而有较大差异。请来店咨询，我们提供免费的个案模拟测算。</span><span class="jp">上記は一般的な参考情報です。ローン条件は金融機関や申請者の状況により異なります。無料でシミュレーション相談を承っておりますのでお気軽にどうぞ。</span></span>
     </div>
   </div>
 </section>
 
-<!-- WECHAT -->
-<section class="wechat-sec" id="wechat">
-  <div class="wechat-inner container">
-    <div class="wechat-text">
-      <h2>微信咨询・QRコード</h2>
-      <p>所有咨询均可通过<span class="wid">微信（WeChat）</span>中文对应。<br>购房疑问、物件预约、贷款模拟，均可随时联系。<br>担当者が中国語で丁寧にご説明いたします。</p>
-      <div class="wechat-steps">
-        <div class="wechat-step"><div class="ws-num">1</div><span>扫描右侧二维码或搜索微信ID添加好友</span></div>
-        <div class="wechat-step"><div class="ws-num">2</div><span>发送「购房咨询」即可开始</span></div>
-        <div class="wechat-step"><div class="ws-num">3</div><span>担当者が中文で迅速に回答いたします</span></div>
-      </div>
-    </div>
-    <div class="wechat-qr-wrap">
-      <div class="qr-frame">
-        <div class="qr-placeholder">
-          <span style="font-size:28px">📱</span>
-          <span>QRコードを<br>ここに配置</span>
-        </div>
-      </div>
-      <div class="qr-label">微信ID</div>
-      <div class="wechat-id">nexcess_realestate</div>
+<!-- CONTACT CTA -->
+<div class="contact-band" id="contact-band">
+  <div class="container">
+    <h2><span class="cn">随时欢迎您的咨询</span><span class="jp">いつでもお気軽にご相談ください</span></h2>
+    <p>
+      <span class="cn">我们提供从选房到交房的全程中文支持。<br>电话、来店均可，完全免费，无任何强制推销。</span>
+      <span class="jp">物件探しから引渡しまで中国語でフルサポート。<br>お電話・ご来店どちらでも、完全無料・勧誘なしでご相談いただけます。</span>
+    </p>
+    <div class="contact-btns">
+      <a href="#" class="contact-btn-main" onclick="openModal(); return false;">
+        📅 <span class="cn">免费来店预约</span><span class="jp">無料来店予約</span>
+      </a>
+      <a href="tel:0120755506" class="contact-btn-sub">
+        📞 <span class="cn">立即致电</span><span class="jp">今すぐ電話する</span> 0120-755-506
+      </a>
     </div>
   </div>
-</section>
+</div>
 
 <!-- COMPANY -->
-<section class="sec sec-bg" id="company">
+<section class="sec sec-bg2" id="company">
   <div class="container">
     <p class="sec-en">ABOUT US</p>
-    <h2 class="sec-title">公司介绍</h2>
+    <h2 class="sec-title"><span class="cn">公司介绍</span><span class="jp">会社案内</span></h2>
     <div class="sec-bar"></div>
     <div class="company-grid">
       <div class="company-about">
-        <h3>为在日华人提供可信赖的不动产服务</h3>
-        <p>合同会社Nexcessは横浜を拠点とした经营顾问・不动产投资公司です。在日中国人の方が购房过程中に直面する言語バリアや制度の違いを深く理解した上で、法律・税務相談から合同起草まで一站式の中文サービスを提供しています。</p>
-        <p>物件紹介だけでなく、贷款申请支援、在留资格与税务方面的综合建议を含む全面サポートで、安心安全な日本での住宅購入を実現します。</p>
-        <div class="license-badge">🏛️ 宅地建物取引業 免許番号：神奈川県知事（X）第XXXXX号</div>
+        <h3><span class="cn">"明日のくらしを豊かに"<br>为居住在日本的您提供可信赖的不动产服务</span><span class="jp">"明日のくらしを豊かに"<br>くらしあは皆さまの豊かな未来を応援します</span></h3>
+        <p>
+          <span class="cn">くらしあ株式会社是以千叶县旭市为据点的不动产销售专门公司。通过加盟全国网络「イエステーション」，为千叶县旭市・銚子市・匝瑳市・横芝光町・山武市・香取市等广大地区的不动产买卖提供专业服务。</span>
+          <span class="jp">くらしあ株式会社は千葉県旭市を拠点とする不動産売買専門会社です。全国ネット「イエステーション」の加盟店として、旭市・銚子市・匝瑳市・横芝光町・山武市・香取市など千葉県内の広いエリアをカバーしています。</span>
+        </p>
+        <p>
+          <span class="cn">我们深刻理解在日中国人购房过程中面临的语言障碍和制度差异，提供中文对应的全程支持，让您安心实现在日本购房的梦想。不仅限于物件介绍，还包括贷款申请支援、在留资格相关咨询、税务建议等综合服务。</span>
+          <span class="jp">在日中国人の方が購入過程で直面する言語バリアや制度の違いを理解した上で、中国語対応の全面サポートを提供。物件紹介だけでなく、ローン申請支援、在留資格・税務相談も含む総合サービスをご提供します。</span>
+        </p>
+        <div class="license-badge">🏛️ <span class="cn">宅地建物取引業 千叶县知事(2)第17424号</span><span class="jp">宅地建物取引業 千葉県知事(2)第17424号</span></div>
+
+        <!-- STORE TABS -->
+        <div style="margin-top: 24px;">
+          <div class="stores-tabs">
+            <button class="store-tab-btn active" onclick="switchStore(this,'s1')"><span class="cn">旭店</span><span class="jp">旭店</span></button>
+            <button class="store-tab-btn" onclick="switchStore(this,'s2')"><span class="cn">銚子店</span><span class="jp">銚子店</span></button>
+            <button class="store-tab-btn" onclick="switchStore(this,'s3')"><span class="cn">横芝光店</span><span class="jp">横芝光店</span></button>
+            <button class="store-tab-btn" onclick="switchStore(this,'s4')"><span class="cn">香取佐原店</span><span class="jp">香取佐原店</span></button>
+            <button class="store-tab-btn" onclick="switchStore(this,'s5')"><span class="cn">東金店</span><span class="jp">東金店</span></button>
+          </div>
+          <div class="store-panel active" id="s1">
+            <div class="store-info">
+              <div><span class="cn">📍 〒289-2511 千葉県旭市イ－2596番地</span><span class="jp">📍 〒289-2511 千葉県旭市イ－2596番地</span></div>
+              <div class="si-tel"><a href="tel:0120755506">0120-755-506</a> <span style="font-size:12px;color:#888">/ 0479-74-3173</span></div>
+              <div><span class="cn">🚃 JR総武本線 旭駅 步行7分</span><span class="jp">🚃 JR総武本線 旭駅 徒歩7分</span></div>
+            </div>
+          </div>
+          <div class="store-panel" id="s2">
+            <div class="store-info">
+              <div>📍 〒288-0041 千葉県銚子市中央町15-1マンション愛1階</div>
+              <div class="si-tel"><a href="tel:0120006862">0120-006-862</a> <span style="font-size:12px;color:#888">/ 0479-21-3300</span></div>
+              <div><span class="cn">🚃 JR総武本線 銚子駅 步行11分</span><span class="jp">🚃 JR総武本線 銚子駅 徒歩11分</span></div>
+            </div>
+          </div>
+          <div class="store-panel" id="s3">
+            <div class="store-info">
+              <div>📍 〒289-1727 千葉県山武郡横芝光町宮川5647-4</div>
+              <div class="si-tel"><a href="tel:0120074762">0120-074-762</a> <span style="font-size:12px;color:#888">/ 0479-75-4762</span></div>
+              <div><span class="cn">🚃 JR総武本線 横芝駅 步行11分</span><span class="jp">🚃 JR総武本線 横芝駅 徒歩11分</span></div>
+            </div>
+          </div>
+          <div class="store-panel" id="s4">
+            <div class="store-info">
+              <div>📍 〒287-0002 千葉県香取市北1-10-22</div>
+              <div class="si-tel"><a href="tel:0120323302">0120-323-302</a> <span style="font-size:12px;color:#888">/ 0478-79-0766</span></div>
+              <div><span class="cn">🚃 JR成田線 佐原駅 步行9分</span><span class="jp">🚃 JR成田線 佐原駅 徒歩9分</span></div>
+            </div>
+          </div>
+          <div class="store-panel" id="s5">
+            <div class="store-info">
+              <div>📍 〒283-0063 千葉県東金市堀上249-1堀上ハイツ2階101</div>
+              <div class="si-tel"><a href="tel:0120001489">0120-001-489</a> <span style="font-size:12px;color:#888">/ 0475-71-3819</span></div>
+              <div><span class="cn">🚃 JR東金線 東金駅 步行13分</span><span class="jp">🚃 JR東金線 東金駅 徒歩13分</span></div>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div>
         <table class="company-table">
-          <tr><th>公司名称</th><td>合同会社 Nexcess</td></tr>
-          <tr><th>所在地</th><td>神奈川県横浜市（詳細はお問合せください）</td></tr>
-          <tr><th>业务内容</th><td>不動産売買仲介・経営顧問・法務・税務支援</td></tr>
-          <tr><th>対応言語</th><td>日本語・中国語（普通话）</td></tr>
-          <tr><th>营业时间</th><td>9:00〜18:00（定休：日曜・祝日）</td></tr>
-          <tr><th>联系方式</th><td>微信 / メール / 电话</td></tr>
+          <tr><th><span class="cn">公司名称</span><span class="jp">会社名</span></th><td>くらしあ株式会社</td></tr>
+          <tr><th><span class="cn">商号</span><span class="jp">商号</span></th><td><span class="cn">イエステーション 旭店・銚子店・横芝光店・香取佐原店・東金店・香取小見川店・山武店・大網白里店</span><span class="jp">イエステーション 旭店・銚子店・横芝光店・香取佐原店・東金店・香取小見川店・山武店・大網白里店</span></td></tr>
+          <tr><th><span class="cn">代表取締役</span><span class="jp">代表取締役</span></th><td>草野謙蔵</td></tr>
+          <tr><th><span class="cn">营业时间</span><span class="jp">営業時間</span></th><td>9:00〜18:00</td></tr>
+          <tr><th><span class="cn">定休日</span><span class="jp">定休日</span></th><td><span class="cn">年中无休（年末年始除外）</span><span class="jp">年中無休（年末年始を除く）</span></td></tr>
+          <tr><th><span class="cn">宅建业免许</span><span class="jp">宅建業免許</span></th><td>千葉県知事(2)第17424号</td></tr>
+          <tr><th><span class="cn">加盟团体</span><span class="jp">加盟団体</span></th><td><span class="cn">（社）千叶县宅地建物取引业协会<br>（社）全国宅地建物取引业保证协会</span><span class="jp">（社）千葉県宅地建物取引業協会<br>（社）全国宅地建物取引業保証協会</span></td></tr>
+          <tr><th><span class="cn">业务内容</span><span class="jp">業務内容</span></th><td><span class="cn">不动产买卖・仲介 / 新建住宅分让 / 宅地开发 / 定制住宅 / 中古物件翻新</span><span class="jp">不動産売買・仲介 / 新築建売住宅分譲 / 宅地開発分譲 / 注文住宅 / 中古物件リノベーション</span></td></tr>
+          <tr><th><span class="cn">对应语言</span><span class="jp">対応言語</span></th><td><span class="cn">日语・中文（普通话）</span><span class="jp">日本語・中国語（普通話）</span></td></tr>
         </table>
       </div>
     </div>
@@ -589,80 +1247,140 @@ footer{background:#162820;color:rgba(255,255,255,.7);font-size:12px}
 <footer>
   <div class="footer-main">
     <div class="footer-brand">
-      <div class="foot-logo">Nexcess 不動産</div>
-      <p>在日华人不动产购买专门窗口<br>横浜を拠点に中国語対応で<br>不動産取引を全面サポート</p>
+      <div class="foot-logo"><span class="cn">イエステーション くらしあ</span><span class="jp">イエステーション くらしあ</span></div>
+      <p><span class="cn">在日华人不动产购买专门窗口<br>千叶县内8店铺，年中无休，中文全程对应。</span><span class="jp">千葉県内8店舗、年中無休<br>中国語でのお問合せも歓迎します。</span></p>
     </div>
     <div class="foot-col">
-      <h4>购房服务</h4>
+      <h4><span class="cn">购房服务</span><span class="jp">購入サービス</span></h4>
       <ul>
-        <li><a href="#properties">最新物件一览</a></li>
-        <li><a href="#shindan">免费购房诊断</a></li>
-        <li><a href="#flow">购房流程</a></li>
-        <li><a href="#loan">贷款说明</a></li>
+        <li><a href="#properties"><span class="cn">最新物件一览</span><span class="jp">最新物件一覧</span></a></li>
+        <li><a href="#shindan"><span class="cn">免费购房诊断</span><span class="jp">無料購入診断</span></a></li>
+        <li><a href="#flow"><span class="cn">购房流程</span><span class="jp">購入の流れ</span></a></li>
+        <li><a href="#loan"><span class="cn">贷款说明</span><span class="jp">ローン説明</span></a></li>
       </ul>
     </div>
     <div class="foot-col">
-      <h4>专题内容</h4>
+      <h4><span class="cn">卖房服务</span><span class="jp">売却サービス</span></h4>
       <ul>
-        <li><a href="#">在日外国人贷款指南</a></li>
-        <li><a href="#">永住者购房须知</a></li>
-        <li><a href="#">购房税费说明</a></li>
-        <li><a href="#">中古房改装流程</a></li>
+        <li><a href="#"><span class="cn">免费房产估价</span><span class="jp">無料査定</span></a></li>
+        <li><a href="#"><span class="cn">空屋买取</span><span class="jp">空き家買取</span></a></li>
+        <li><a href="#"><span class="cn">卖房时机</span><span class="jp">売却のタイミング</span></a></li>
+        <li><a href="#"><span class="cn">売却相关费用</span><span class="jp">売却諸費用</span></a></li>
       </ul>
     </div>
     <div class="foot-col">
-      <h4>联系我们</h4>
+      <h4><span class="cn">联系我们</span><span class="jp">お問合せ</span></h4>
       <ul>
-        <li><a href="#wechat">💬 微信咨询</a></li>
-        <li><a href="#">📧 发送邮件</a></li>
-        <li><a href="#company">🏢 公司介绍</a></li>
-        <li><a href="#">🔒 隐私政策</a></li>
+        <li><a href="tel:0120755506">📞 0120-755-506</a></li>
+        <li><a href="#" onclick="openModal(); return false;">📅 <span class="cn">来店预约</span><span class="jp">来店予約</span></a></li>
+        <li><a href="#company">🏢 <span class="cn">公司介绍</span><span class="jp">会社案内</span></a></li>
+        <li><a href="#">🔒 <span class="cn">隐私政策</span><span class="jp">プライバシーポリシー</span></a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    © 2026 合同会社 Nexcess. All rights reserved. ｜ 宅地建物取引業 神奈川県知事（X）第XXXXX号
+    © 2026 くらしあ株式会社 All rights reserved. ｜ 宅地建物取引業 千葉県知事(2)第17424号
+    <span style="display:block;margin-top:4px;font-size:10px;color:rgba(255,255,255,.2)">※本サイトはデモサイトです。掲載情報は参考であり、実際の物件情報・価格とは異なる場合があります。</span>
   </div>
 </footer>
 
-<script>
-const answers = {};
+<!-- RESERVE MODAL -->
+<div class="modal-overlay" id="reserveModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title"><span class="cn">来店预约</span><span class="jp">来店予約</span></div>
+    <div class="modal-sub"><span class="cn">请填写以下信息，我们将在1个工作日内与您联系。</span><span class="jp">以下の情報をご入力ください。1営業日以内にご連絡いたします。</span></div>
+    <div class="form-row">
+      <label><span class="cn">姓名 *</span><span class="jp">お名前 *</span></label>
+      <input type="text" placeholder="张 / 李 / 王…">
+    </div>
+    <div class="form-row">
+      <label><span class="cn">联系电话 *</span><span class="jp">お電話番号 *</span></label>
+      <input type="tel" placeholder="090-XXXX-XXXX">
+    </div>
+    <div class="form-row">
+      <label><span class="cn">希望咨询的店铺</span><span class="jp">ご希望の店舗</span></label>
+      <select>
+        <option><span class="cn">旭店</span></option>
+        <option>銚子店</option>
+        <option>横芝光店</option>
+        <option>香取佐原店</option>
+        <option>東金店</option>
+        <option>香取小見川店</option>
+        <option>山武店</option>
+        <option>大網白里店</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label><span class="cn">咨询内容</span><span class="jp">ご相談内容</span></label>
+      <textarea placeholder="（例）在日华人购房咨询 / 贷款模拟 / 空屋查询 ..."></textarea>
+    </div>
+    <button class="form-submit" onclick="submitForm()">
+      <span class="cn">发送预约请求</span><span class="jp">予約リクエストを送信</span>
+    </button>
+  </div>
+</div>
 
+<script>
+/* ===== LANG TOGGLE ===== */
+let isJP = false;
+function toggleLang() {
+  isJP = !isJP;
+  document.body.classList.toggle('lang-jp', isJP);
+  document.getElementById('langBtnLabel').textContent = isJP ? '中文' : '日本語';
+}
+
+/* ===== MODAL ===== */
+function openModal() {
+  document.getElementById('reserveModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('reserveModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('reserveModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+function submitForm() {
+  alert(isJP ? '予約リクエストを受け付けました。1営業日以内にご連絡いたします。' : '预约请求已发送！我们将在1个工作日内与您联系。');
+  closeModal();
+}
+
+/* ===== SHINDAN ===== */
+const answers = {};
 function selectOpt(btn, step) {
   document.querySelectorAll('#step' + step + ' .opt-btn').forEach(b => b.classList.remove('selected'));
   btn.classList.add('selected');
-  answers[step] = btn.querySelector('.opt-label').textContent.trim();
+  const label = btn.querySelector('.opt-label');
+  answers[step] = label ? label.textContent.trim() : '';
   const nb = document.getElementById('next' + step);
   if (nb) nb.disabled = false;
 }
-
 function goNext(step) {
   document.getElementById('step' + (step - 1)).classList.remove('active');
   document.getElementById('step' + step).classList.add('active');
   updateProg(step);
   document.getElementById('shindan').scrollIntoView({behavior:'smooth', block:'start'});
 }
-
 function goBack(step) {
   document.getElementById('step' + (step + 1)).classList.remove('active');
   document.getElementById('step' + step).classList.add('active');
   updateProg(step);
 }
-
 function updateProg(cur) {
   document.getElementById('progBar').style.width = ((cur - 1) / 5 * 100) + '%';
-  for (let i = 1; i <= 6; i++) {
+  for (let i = 1; i <= 5; i++) {
     const d = document.getElementById('dot' + i);
     d.classList.remove('active','done');
     if (i < cur) d.classList.add('done');
     if (i === cur) d.classList.add('active');
   }
 }
-
 function showResult() {
   document.getElementById('step5').classList.remove('active');
   document.getElementById('progBar').style.width = '100%';
-  for (let i = 1; i <= 6; i++) document.getElementById('dot' + i).classList.add('done');
+  for (let i = 1; i <= 5; i++) document.getElementById('dot' + i).classList.add('done');
 
   const visa = answers[1] || '';
   const budget = answers[2] || '';
@@ -670,42 +1388,41 @@ function showResult() {
   const purpose = answers[4] || '';
   const loan = answers[5] || '';
   const cards = [];
+  const jp = isJP;
 
-  // Visa card
   if (visa.includes('永住')) {
-    cards.push({icon:'✅', title:'在留资格：贷款条件最优', body:'作为永住者，您可申请几乎所有日本银行的住宅ローン，利率条件与日本人相同。建议积极比较变动利率型贷款，降低前期负担。', warn:false});
-  } else if (visa.includes('定住') || visa.includes('配偶者')) {
-    cards.push({icon:'✅', title:'在留资格：多数银行可申请', body:'定住者・配偶者资格可申请大部分银行贷款。建议提前准备所得証明书和在留相关文件，有效缩短审查时间。', warn:false});
+    cards.push({icon:'✅', title: jp ? '在留資格：最も有利な条件' : '在留资格：贷款条件最优', body: jp ? '永住者として、ほぼ全ての銀行の住宅ローンを日本人と同条件で申請できます。変動金利型を中心に複数行を比較することをお勧めします。' : '作为永住者，您可申请几乎所有日本银行的住宅ローン，利率条件与日本人相同。建议积极比较变动利率型贷款，降低前期负担。', warn:false});
+  } else if (visa.includes('定住') || visa.includes('配偶')) {
+    cards.push({icon:'✅', title: jp ? '在留資格：多くの銀行で申請可' : '在留资格：多数银行可申请', body: jp ? '定住者・配偶者資格では多くの銀行でローン申請が可能です。所得証明書や在留関連書類を事前に準備すると審査がスムーズです。' : '定住者・配偶者资格可申请大部分银行贷款。建议提前准备所得证明书和在留相关文件，有效缩短审查时间。', warn:false});
   } else if (visa.includes('就労')) {
-    cards.push({icon:'⚠️', title:'在留资格：可申请银行范围较窄', body:'就労ビザ対応の銀行はSBI住信ネット銀行等に限られます。在留期間の残余日数も審査に影響しますので、更新前後のタイミングにご注意ください。首付比率は20〜30%になる場合があります。', warn:true});
+    cards.push({icon:'⚠️', title: jp ? '在留資格：申請できる銀行が限定' : '在留资格：可申请银行范围较窄', body: jp ? '就労ビザ対応の銀行はSBI住信ネット銀行等に限られます。頭金20〜30%が必要になる場合があります。在留期間の残余日数も審査に影響します。' : '就労ビザ对应的银行较为有限。首付比率可能要求20〜30%。在留期间剩余日数也会影响审查结果。', warn:true});
   } else {
-    cards.push({icon:'📋', title:'在留资格：需先确认', body:'在留资格は贷款可否に直结します。まずは详细状况をお聞かせください。最適な进め方をご提案いたします。', warn:false});
+    cards.push({icon:'📋', title: jp ? '在留資格：まずご確認を' : '在留资格：需先确认', body: jp ? '在留資格はローン可否に直結します。まずは詳細状況をお聞かせください。最適な進め方をご提案します。' : '在留资格直接影响贷款申请。请先告知我们您的具体情况，我们将提供最适合的方案。', warn:false});
   }
 
-  // Loan card
-  if (loan.includes('利用贷款') || loan.includes('不确定')) {
-    const mid = budget.includes('以下') ? 800 : budget.includes('1,000〜3,000') ? 2000 : budget.includes('3,000〜5,000') ? 4000 : 6000;
-    cards.push({icon:'💴', title:'贷款模拟目安', body:`予算${budget}の場合、首付金の目安は${Math.round(mid*0.1)}〜${Math.round(mid*0.2)}万円（10〜20%）。諸費用（仲介手数料・登記費等）は別途5〜8%程度ご準備ください。詳細な试算は微信にてご依頼ください。`, warn:false});
-  } else if (loan.includes('全额')) {
-    cards.push({icon:'💰', title:'全额现金：手续最简便', body:'全额现金购买无需贷款审查，可快速推进合同流程。来自境外的资金建议提前确认资金来源证明文件（残高証明等），以备签约时使用。', warn:false});
+  if (loan.includes('全款') || loan.includes('全額')) {
+    cards.push({icon:'💰', title: jp ? '全額現金：手続き最もシンプル' : '全款购买：手续最简便', body: jp ? '全額現金購入はローン審査不要で、契約から引渡しまでスムーズに進められます。海外からの送金の場合は、資金の出所証明書（残高証明等）をご準備ください。' : '全款购买无需贷款审查，可快速推进合同流程。来自境外的资金建议提前确认资金来源证明文件（残高証明等）。', warn:false});
+  } else if (loan.includes('贷款') || loan.includes('ローン') || loan.includes('未定') || loan.includes('不確定') || loan.includes('还不')) {
+    const mid = budget.includes('500万') ? 300 : budget.includes('500〜1,500') ? 1000 : budget.includes('1,500') ? 2000 : 3500;
+    cards.push({icon:'💴', title: jp ? 'ローンシミュレーション' : '贷款模拟参考', body: jp ? `ご予算に対する頭金の目安は${Math.round(mid*0.1)}〜${Math.round(mid*0.2)}万円（10〜20%）。諸費用（仲介手数料・登記費等）は別途5〜8%程度ご準備ください。詳しいシミュレーションはご来店にてご相談ください。` : `您的预算中，首付目安约为${Math.round(mid*0.1)}〜${Math.round(mid*0.2)}万円（10〜20%）。另需准备约5〜8%的手续费（仲介手数料・登記費等）。详细模拟请来店咨询。`, warn:false});
   }
 
-  // Purpose card
-  if (purpose.includes('自住')) {
-    cards.push({icon:'🏡', title:'自住购房：可享住宅ローン减税', body:'居住用物件購入で「住宅ローン控除（減税）」が適用される場合があります。年末残高の0.7%が最大13年間、所得税・住民税から控除。外国人の方も条件次第で利用可能です。', warn:false});
-  } else if (purpose.includes('投资')) {
-    cards.push({icon:'📈', title:'投资购房：收益率与税务管理', body:'出租收益（家賃収入）は日本で確定申告が必要です。管理費・修繕費・減価償却費を経費計上することで節税可能。横浜・川崎エリアは賃貸需要が安定しており、表面利回り5〜7%も狙えるエリアがあります。', warn:false});
+  if (purpose.includes('自住') || purpose.includes('自己居住')) {
+    cards.push({icon:'🏡', title: jp ? '自己居住：住宅ローン控除が使える' : '自住购房：可享住宅ローン减税', body: jp ? '居住用物件の購入で「住宅ローン控除（減税）」が適用される場合があります。年末残高の0.7%が最大13年間、所得税・住民税から控除されます。外国人の方も条件次第で利用可能です。' : '居住用物件購入で「住宅ローン控除（減税）」が适用されます。年末余额的0.7%最长13年间从所得税・住民税中扣除。外国人也可根据条件享受。', warn:false});
+  } else if (purpose.includes('投资') || purpose.includes('投資')) {
+    cards.push({icon:'📈', title: jp ? '投資購入：収益率と税務管理' : '投资购房：收益率与税务管理', body: jp ? '千葉県旭市・銚子市エリアは比較的安価で物件を取得でき、表面利回り8〜12%も狙えるエリアがあります。家賃収入は日本で確定申告が必要です。管理費・減価償却費の経費計上で節税も可能です。' : '千叶县旭市・銚子市地区物件价格低廉，表面利回り可达8〜12%。租金收入需在日本申报纳税，但可通过管理费・折旧等经费计上节税。', warn:false});
   }
 
-  // Type card
-  if (type.includes('中古')) {
-    cards.push({icon:'🔧', title:'中古戸建：购买前建议进行建物诊断', body:'中古物件は価格が低く、自由にリフォームできるのが魅力です。当社ではホームインスペクション（建物診断）のアレンジとリフォーム業者のご紹介も承っております。', warn:false});
+  if (type.includes('中古独栋') || type.includes('中古戸建')) {
+    cards.push({icon:'🔧', title: jp ? '中古戸建：購入前に建物診断を' : '中古独栋：建议进行建筑诊断', body: jp ? '中古物件は価格が低く、自由にリフォームできる魅力があります。くらしあではホームインスペクション（建物診断）のアレンジとリフォーム業者のご紹介も承っております。' : '中古物件价格低廉，可自由翻新。くらしあ提供建筑诊断（ホームインスペクション）安排及翻新业者介绍服务。', warn:false});
   }
 
-  // CTA card
-  cards.push({icon:'💬', title:'次のステップ：免费个别咨询', body:'上記の内容についてご不明な点、追加でお知りになりたいことがあれば、微信（WeChat）でお気軽にご連絡ください。中国語で詳しくご説明いたします。物件内覧のご予約も受け付けております。', warn:false});
+  cards.push({icon:'📅', title: jp ? '次のステップ：無料来店相談' : '下一步：免费来店咨询', body: jp ? '上記についてご不明な点があればお気軽にご来店ください。中国語スタッフが丁寧にご説明します。物件内覧のご予約も受け付けております。年中無休 9:00〜18:00。' : '如有任何疑问，欢迎随时来店咨询。中文工作人员将为您详细说明。也可预约实地参观物件。年中无休 9:00〜18:00。', warn:false});
 
-  document.getElementById('resultSub').textContent = `在留：「${visa}」 / 予算：「${budget}」 / ${purpose} をもとにした提案です`;
+  document.getElementById('resultSub').textContent = jp
+    ? `在留：「${answers[1]||''}」 / 予算：「${answers[2]||''}」 / ${answers[4]||''} をもとにしたご提案です`
+    : `在留：「${answers[1]||''}」 / 预算：「${answers[2]||''}」 / ${answers[4]||''} 综合诊断结果`;
+
   const c = document.getElementById('resultCards');
   c.innerHTML = '';
   cards.forEach(card => {
@@ -717,7 +1434,6 @@ function showResult() {
   document.getElementById('resultPanel').classList.add('active');
   document.getElementById('shindan').scrollIntoView({behavior:'smooth', block:'start'});
 }
-
 function restartShindan() {
   for (const k in answers) delete answers[k];
   document.querySelectorAll('.step-panel,.result-panel').forEach(el => el.classList.remove('active'));
@@ -726,6 +1442,14 @@ function restartShindan() {
   document.getElementById('step1').classList.add('active');
   updateProg(1);
   document.getElementById('shindan').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+/* ===== STORE TABS ===== */
+function switchStore(btn, panelId) {
+  document.querySelectorAll('.store-tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.store-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(panelId).classList.add('active');
 }
 </script>
 </body>
