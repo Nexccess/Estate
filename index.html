@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>在日华人不动产服务 | Nexcess不動産</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;font-size:15px;color:#333;background:#fff;line-height:1.8}
+a{color:inherit;text-decoration:none}
+.container{max-width:1060px;margin:0 auto;padding:0 24px}
+.sec{padding:64px 0}
+.sec-bg{background:#f5f7f5}
+.sec-title{font-family:'Noto Serif SC',serif;font-size:26px;font-weight:600;color:#1d5c30;text-align:center;margin-bottom:6px}
+.sec-en{text-align:center;font-size:11px;color:#aaa;letter-spacing:3px;margin-bottom:8px}
+.sec-bar{width:44px;height:3px;background:#2a7a3f;margin:0 auto 40px;border-radius:2px}
+.btn-outline-green{display:inline-block;border:2px solid #2a7a3f;color:#2a7a3f;padding:11px 34px;border-radius:4px;font-size:14px;font-weight:500;transition:all .2s}
+.btn-outline-green:hover{background:#2a7a3f;color:#fff}
+
+/* TOP BAR */
+.topbar{background:#1d5c30;color:#c8f0d0;font-size:12px;display:flex;justify-content:flex-end;gap:24px;padding:6px 28px}
+.topbar a{color:#c8f0d0;transition:color .15s}
+.topbar a:hover{color:#fff}
+
+/* HEADER */
+.header{background:#fff;border-bottom:3px solid #2a7a3f;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.09)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 28px;gap:16px}
+.logo-wrap .logo-jp{font-family:'Noto Serif SC',serif;font-size:21px;font-weight:600;color:#1d5c30}
+.logo-wrap .logo-cn{font-size:10px;color:#aaa;letter-spacing:2px;margin-top:1px}
+.header-actions{display:flex;align-items:center;gap:14px}
+.tel-block .tel{font-size:19px;font-weight:700;color:#1d5c30}
+.tel-block .tel-lbl{font-size:10px;color:#999}
+.wechat-btn{background:#07c160;color:#fff;border:none;padding:10px 18px;border-radius:5px;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px;font-family:inherit}
+.wechat-btn:hover{background:#06ad56}
+
+/* NAV */
+.nav{background:#235c35}
+.nav ul{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;max-width:1060px;margin:0 auto}
+.nav ul li a{display:block;color:#d4edd9;padding:12px 18px;font-size:13px;transition:background .2s}
+.nav ul li a:hover{background:#1d5c30;color:#fff}
+
+/* HERO */
+.hero{background:linear-gradient(150deg,#1d5c30 0%,#2a7a3f 55%,#3a9451 100%);min-height:440px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 0,transparent 20px);background-size:20px 20px}
+.hero-content{position:relative;z-index:2;padding:60px 28px 60px 60px;max-width:640px}
+.hero-badge{display:inline-block;border:1px solid rgba(255,255,255,.35);color:rgba(255,255,255,.9);font-size:11px;padding:5px 16px;border-radius:20px;letter-spacing:2px;margin-bottom:20px}
+.hero-h1{font-family:'Noto Serif SC',serif;font-size:34px;font-weight:600;color:#fff;line-height:1.45;margin-bottom:16px;text-shadow:0 2px 6px rgba(0,0,0,.2)}
+.hero-h1 em{color:#a8e6be;font-style:normal}
+.hero-p{color:rgba(255,255,255,.85);font-size:14px;line-height:1.95;margin-bottom:28px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero-btn-main{background:#fff;color:#1d5c30;padding:13px 28px;border-radius:4px;font-size:14px;font-weight:700;transition:opacity .2s}
+.hero-btn-main:hover{opacity:.9}
+.hero-btn-sub{border:1px solid rgba(255,255,255,.6);color:#fff;padding:13px 28px;border-radius:4px;font-size:14px;transition:background .2s}
+.hero-btn-sub:hover{background:rgba(255,255,255,.12)}
+.hero-stats{position:absolute;bottom:0;right:0;display:flex;background:rgba(0,0,0,.38)}
+.hero-stat{padding:16px 24px;text-align:center;border-left:1px solid rgba(255,255,255,.15)}
+.hero-stat:first-child{border-left:none}
+.stat-num{font-size:22px;font-weight:700;color:#9de3b8}
+.stat-lbl{font-size:10px;color:rgba(255,255,255,.7);margin-top:2px;letter-spacing:.3px}
+
+/* NEWS BAND */
+.news-band{background:#f0f7f2;border-top:1px solid #cde8d5;border-bottom:1px solid #cde8d5}
+.news-inner{display:flex;align-items:stretch;max-width:1060px;margin:0 auto;padding:0 24px}
+.news-lbl{background:#2a7a3f;color:#fff;font-size:12px;padding:0 18px;display:flex;align-items:center;white-space:nowrap;min-height:46px}
+.news-scroll{padding:10px 18px;flex:1}
+.news-row{display:flex;align-items:center;gap:10px;padding:3px 0;font-size:13px}
+.news-date{color:#999;font-size:11px;white-space:nowrap}
+.news-tag{font-size:10px;background:#e0f0e6;color:#2a7a3f;border:1px solid #b8ddc4;padding:1px 7px;border-radius:3px;white-space:nowrap}
+.news-row a{color:#1d5c30}
+.news-row a:hover{text-decoration:underline}
+
+/* PROPERTIES */
+.prop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.prop-card{border:1px solid #e0e0da;border-radius:6px;overflow:hidden;transition:transform .2s,box-shadow .2s;display:block;color:inherit}
+.prop-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.11)}
+.prop-img{height:186px;background:linear-gradient(135deg,#c8e6ce,#9dd4ae);position:relative;display:flex;align-items:center;justify-content:center;font-size:52px;color:#4a9060}
+.prop-flag{position:absolute;top:10px;left:10px;background:#c0392b;color:#fff;font-size:11px;padding:3px 9px;border-radius:3px}
+.prop-flag.sale{background:#1a6fb5}
+.prop-body{padding:16px}
+.prop-kind{display:inline-block;font-size:11px;background:#e6f4ea;color:#2a7a3f;border:1px solid #c2dfc9;padding:2px 8px;border-radius:3px;margin-bottom:8px}
+.prop-name{font-size:15px;font-weight:700;color:#222;margin-bottom:5px}
+.prop-loc{font-size:12px;color:#888;margin-bottom:12px}
+.prop-price{font-size:23px;font-weight:700;color:#c0392b}
+.prop-price-unit{font-size:13px;color:#888;font-weight:400;margin-left:3px}
+.prop-meta{display:flex;gap:16px;margin-top:10px;padding-top:10px;border-top:1px solid #eee;font-size:12px;color:#666}
+.prop-meta span strong{display:block;font-size:13px;color:#333;font-weight:600}
+.view-all{text-align:center;margin-top:36px}
+
+/* ===== SHINDAN ===== */
+.shindan-sec{background:linear-gradient(160deg,#f2faf4,#e8f4eb);border-top:1px solid #cde8d5;border-bottom:1px solid #cde8d5}
+.shindan-intro{max-width:620px;margin:0 auto 40px;text-align:center;color:#555;font-size:14px;line-height:1.9}
+.shindan-box{max-width:720px;margin:0 auto;background:#fff;border-radius:10px;box-shadow:0 4px 24px rgba(0,0,0,.1);overflow:hidden}
+
+/* progress */
+.shindan-progress{background:#f4f5f3;padding:20px 32px 14px}
+.prog-bar-wrap{height:5px;background:#ddd;border-radius:3px;overflow:hidden;margin-bottom:14px}
+.prog-bar{height:100%;background:#2a7a3f;border-radius:3px;transition:width .4s ease}
+.prog-dots{display:flex;justify-content:space-between}
+.prog-dot{width:26px;height:26px;border-radius:50%;border:2px solid #ddd;background:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;color:#bbb;transition:all .3s;font-weight:500}
+.prog-dot.active{border-color:#2a7a3f;background:#2a7a3f;color:#fff}
+.prog-dot.done{border-color:#2a7a3f;background:#2a7a3f;color:#fff}
+
+/* step */
+.shindan-body{padding:30px 32px}
+.step-panel{display:none}
+.step-panel.active{display:block}
+.step-q{font-family:'Noto Serif SC',serif;font-size:18px;font-weight:600;color:#1d5c30;margin-bottom:6px}
+.step-hint{font-size:12px;color:#999;margin-bottom:22px}
+.opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opt-btn{background:#f9faf9;border:2px solid #dde8df;border-radius:8px;padding:16px 14px;cursor:pointer;text-align:left;transition:all .2s;font-family:inherit;width:100%}
+.opt-btn:hover{border-color:#2a7a3f;background:#f0f7f2}
+.opt-btn.selected{border-color:#2a7a3f;background:#e6f4ea}
+.opt-icon{font-size:22px;margin-bottom:6px;display:block}
+.opt-label{font-size:14px;font-weight:500;color:#222;display:block}
+.opt-sub{font-size:11px;color:#888;margin-top:2px;display:block}
+.step-nav{display:flex;justify-content:space-between;align-items:center;margin-top:26px}
+.step-back{background:none;border:1px solid #ccc;color:#666;padding:10px 20px;border-radius:4px;cursor:pointer;font-size:13px;font-family:inherit}
+.step-back:hover{background:#f5f5f5}
+.step-next{background:#2a7a3f;color:#fff;border:none;padding:11px 28px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:500;font-family:inherit;transition:background .2s}
+.step-next:hover{background:#1d5c30}
+.step-next:disabled{background:#ccc;cursor:not-allowed}
+
+/* result */
+.result-panel{display:none;padding:30px 32px}
+.result-panel.active{display:block}
+.result-header{text-align:center;margin-bottom:26px}
+.result-icon{font-size:44px;margin-bottom:10px}
+.result-title{font-family:'Noto Serif SC',serif;font-size:22px;color:#1d5c30;margin-bottom:5px}
+.result-sub{font-size:12px;color:#888;line-height:1.6}
+.result-cards{display:grid;gap:12px;margin-bottom:22px}
+.result-card{border-left:4px solid #2a7a3f;background:#f5faf6;padding:14px 18px;border-radius:0 6px 6px 0}
+.result-card.warn{border-color:#e67e22;background:#fdf6ee}
+.result-card-title{font-size:13px;font-weight:700;color:#1d5c30;margin-bottom:5px}
+.result-card.warn .result-card-title{color:#c0600a}
+.result-card p{font-size:13px;color:#555;line-height:1.8}
+.result-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;padding-top:20px;border-top:1px solid #eee}
+.cta-wechat{background:#07c160;color:#fff;padding:13px 26px;border-radius:5px;font-size:14px;font-weight:600;cursor:pointer;border:none;font-family:inherit}
+.cta-wechat:hover{background:#06ad56}
+.cta-restart{background:none;border:1px solid #2a7a3f;color:#2a7a3f;padding:12px 22px;border-radius:5px;font-size:13px;cursor:pointer;font-family:inherit}
+.cta-restart:hover{background:#f0f7f2}
+
+/* FLOW */
+.flow-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:1px;background:#e0e0da}
+.flow-step{background:#fff;padding:28px 18px;text-align:center}
+.flow-num{width:32px;height:32px;background:#2a7a3f;color:#fff;border-radius:50%;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.flow-icon{font-size:26px;margin-bottom:10px}
+.flow-title{font-size:13px;font-weight:700;color:#1d5c30;margin-bottom:5px}
+.flow-desc{font-size:11px;color:#777;line-height:1.7}
+
+/* LOAN */
+.loan-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.loan-card{background:#fff;border:1px solid #e0e0da;border-radius:6px;padding:22px;border-top:4px solid #2a7a3f}
+.loan-card-title{font-size:15px;font-weight:700;color:#1d5c30;margin-bottom:12px}
+.loan-card p,.loan-card li{font-size:13px;color:#555;line-height:1.85}
+.loan-card ul{list-style:none;padding:0}
+.loan-card ul li::before{content:'✓ ';color:#2a7a3f;font-weight:700}
+.loan-card ul li{padding:2px 0}
+.loan-note{background:#fff8e6;border:1px solid #f0d880;border-radius:6px;padding:15px 18px;margin-top:20px;font-size:13px;color:#7a6010;display:flex;gap:10px;align-items:flex-start}
+
+/* WECHAT */
+.wechat-sec{background:#1d5c30}
+.wechat-inner{display:flex;align-items:center;justify-content:center;gap:56px;flex-wrap:wrap;padding:56px 24px}
+.wechat-text h2{font-family:'Noto Serif SC',serif;font-size:26px;color:#fff;margin-bottom:12px}
+.wechat-text p{color:rgba(255,255,255,.8);font-size:14px;line-height:1.9;max-width:400px}
+.wechat-text .wid{color:#a8e6be}
+.wechat-qr-wrap{text-align:center}
+.qr-frame{width:156px;height:156px;background:#fff;border-radius:8px;padding:10px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center}
+.qr-placeholder{width:136px;height:136px;background:#f0f0f0;border:2px dashed #ccc;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#aaa;font-size:11px;text-align:center}
+.qr-label{color:rgba(255,255,255,.75);font-size:12px}
+.wechat-id{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:6px 16px;border-radius:4px;font-size:13px;margin-top:5px;letter-spacing:1px}
+.wechat-steps{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+.wechat-step{display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,.8);font-size:13px}
+.ws-num{background:rgba(255,255,255,.15);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;margin-top:2px}
+
+/* COMPANY */
+.company-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+.company-about h3{font-family:'Noto Serif SC',serif;font-size:19px;color:#1d5c30;margin-bottom:14px}
+.company-about p{font-size:14px;color:#555;line-height:1.95;margin-bottom:12px}
+.company-table{width:100%;border-collapse:collapse;font-size:13px}
+.company-table th,.company-table td{padding:9px 12px;border:1px solid #e0e0da;text-align:left}
+.company-table th{background:#f5f7f5;color:#555;font-weight:500;width:36%}
+.license-badge{display:inline-flex;align-items:center;gap:6px;background:#e6f4ea;border:1px solid #c2dfc9;color:#1d5c30;padding:7px 14px;border-radius:4px;font-size:12px;margin-top:14px}
+
+/* FOOTER */
+footer{background:#162820;color:rgba(255,255,255,.7);font-size:12px}
+.footer-main{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px;padding:44px 24px 28px;max-width:1060px;margin:0 auto}
+.foot-logo{font-family:'Noto Serif SC',serif;font-size:18px;color:#fff;margin-bottom:8px}
+.footer-brand p{color:rgba(255,255,255,.55);font-size:12px;line-height:1.8}
+.foot-col h4{color:#9de3b8;font-size:12px;font-weight:600;margin-bottom:12px;letter-spacing:.5px}
+.foot-col ul{list-style:none}
+.foot-col ul li{padding:3px 0}
+.foot-col ul li a{color:rgba(255,255,255,.6);font-size:12px}
+.foot-col ul li a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);text-align:center;padding:14px 24px;color:rgba(255,255,255,.35);font-size:11px}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .header-inner{padding:10px 16px}
+  .tel-block{display:none}
+  .hero-content{padding:40px 20px}
+  .hero-h1{font-size:24px}
+  .hero-stats{position:static;background:rgba(0,0,0,.45)}
+  .hero{flex-direction:column;min-height:auto}
+  .opt-grid{grid-template-columns:1fr}
+  .loan-grid,.company-grid{grid-template-columns:1fr}
+  .footer-main{grid-template-columns:1fr 1fr}
+  .shindan-body{padding:22px 20px}
+  .shindan-progress{padding:16px 20px 12px}
+}
+@media(max-width:480px){
+  .footer-main{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="#wechat">💬 微信咨询</a>
+  <a href="#shindan">📋 购房诊断</a>
+  <a href="#company">🏢 公司介绍</a>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo-wrap">
+      <div class="logo-jp">Nexcess 不動産</div>
+      <div class="logo-cn">在日华人不动产购买服务</div>
+    </div>
+    <div class="header-actions">
+      <div class="tel-block">
+        <div class="tel">045-XXX-XXXX</div>
+        <div class="tel-lbl">9:00〜18:00（中文对应）</div>
+      </div>
+      <button class="wechat-btn" onclick="document.getElementById('wechat').scrollIntoView({behavior:'smooth'})">
+        💬 微信咨询
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav">
+  <ul>
+    <li><a href="#properties">🏠 最新物件</a></li>
+    <li><a href="#shindan">📋 购房诊断</a></li>
+    <li><a href="#flow">📝 购房流程</a></li>
+    <li><a href="#loan">💴 贷款说明</a></li>
+    <li><a href="#wechat">💬 微信联系</a></li>
+    <li><a href="#company">🏢 公司介绍</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">在日华人不动产购买 专门窗口</div>
+    <h1 class="hero-h1">在日本购买房产<br>我们用<em>中文</em>全程支持</h1>
+    <p class="hero-p">从选房、贷款咨询、合同签署到交房，所有手续均可中文对应。<br>了解在日中国人购房的独特注意事项，安心踏出第一步。</p>
+    <div class="hero-btns">
+      <a href="#shindan" class="hero-btn-main">📋 免费购房诊断（约3分钟）</a>
+      <a href="#flow" class="hero-btn-sub">购房流程介绍</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="stat-num">中文</div><div class="stat-lbl">全程对应</div></div>
+    <div class="hero-stat"><div class="stat-num">無料</div><div class="stat-lbl">咨询免费</div></div>
+    <div class="hero-stat"><div class="stat-num">WeChat</div><div class="stat-lbl">即時対応</div></div>
+  </div>
+</section>
+
+<!-- NEWS BAND -->
+<div class="news-band">
+  <div class="news-inner">
+    <div class="news-lbl">最新物件</div>
+    <div class="news-scroll">
+      <div class="news-row"><span class="news-date">2026.04.21</span><span class="news-tag">中古戸建</span><a href="#">横浜市鶴見区 3LDK 2,480万円 新着</a></div>
+      <div class="news-row"><span class="news-date">2026.04.18</span><span class="news-tag">マンション</span><a href="#">川崎市中原区 2LDK 3,200万円 特価</a></div>
+      <div class="news-row"><span class="news-date">2026.04.15</span><span class="news-tag">土地</span><a href="#">横浜市港北区 110㎡ 1,950万円</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROPERTIES -->
+<section class="sec" id="properties">
+  <div class="container">
+    <p class="sec-en">NEW PROPERTIES</p>
+    <h2 class="sec-title">最新推荐物件</h2>
+    <div class="sec-bar"></div>
+    <div class="prop-grid">
+      <a href="#" class="prop-card">
+        <div class="prop-img">🏠<span class="prop-flag">NEW</span></div>
+        <div class="prop-body">
+          <span class="prop-kind">中古戸建</span>
+          <div class="prop-name">横浜市鶴見区 3LDK 一戸建</div>
+          <div class="prop-loc">📍 鶴見駅 徒歩12分</div>
+          <div class="prop-price">2,480<span class="prop-price-unit">万円</span></div>
+          <div class="prop-meta">
+            <span><strong>3LDK</strong>间取</span>
+            <span><strong>82.6㎡</strong>建筑</span>
+            <span><strong>97㎡</strong>土地</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="prop-card">
+        <div class="prop-img">🏢<span class="prop-flag sale">特価</span></div>
+        <div class="prop-body">
+          <span class="prop-kind">マンション</span>
+          <div class="prop-name">川崎市中原区 2LDK 分譲</div>
+          <div class="prop-loc">📍 武蔵中原駅 徒歩8分</div>
+          <div class="prop-price">3,200<span class="prop-price-unit">万円</span></div>
+          <div class="prop-meta">
+            <span><strong>2LDK</strong>间取</span>
+            <span><strong>63.4㎡</strong>専有</span>
+            <span><strong>5F/12F</strong>楼层</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="prop-card">
+        <div class="prop-img">🌳<span class="prop-flag">NEW</span></div>
+        <div class="prop-body">
+          <span class="prop-kind">土地</span>
+          <div class="prop-name">横浜市港北区 宅地分譲</div>
+          <div class="prop-loc">📍 綱島駅 バス10分</div>
+          <div class="prop-price">1,950<span class="prop-price-unit">万円</span></div>
+          <div class="prop-meta">
+            <span><strong>110㎡</strong>面积</span>
+            <span><strong>第一種</strong>用途</span>
+            <span><strong>角地</strong>条件</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="view-all"><a href="#" class="btn-outline-green">查看全部物件 →</a></div>
+  </div>
+</section>
+
+<!-- ===== SHINDAN 購入相談診断 ===== -->
+<section class="sec shindan-sec" id="shindan">
+  <div class="container">
+    <p class="sec-en">PURCHASE CONSULTATION</p>
+    <h2 class="sec-title">📋 免费购房诊断</h2>
+    <div class="sec-bar"></div>
+    <div class="shindan-intro">
+      回答以下5个问题（约3分钟），根据您的实际情况，<br>为您提供<strong>个性化的购房建议</strong>与注意事项。
+    </div>
+    <div class="shindan-box">
+      <!-- PROGRESS BAR -->
+      <div class="shindan-progress">
+        <div class="prog-bar-wrap"><div class="prog-bar" id="progBar" style="width:0%"></div></div>
+        <div class="prog-dots">
+          <div class="prog-dot active" id="dot1">1</div>
+          <div class="prog-dot" id="dot2">2</div>
+          <div class="prog-dot" id="dot3">3</div>
+          <div class="prog-dot" id="dot4">4</div>
+          <div class="prog-dot" id="dot5">5</div>
+          <div class="prog-dot" id="dot6">✓</div>
+        </div>
+      </div>
+
+      <!-- STEP 1 -->
+      <div class="step-panel active" id="step1">
+        <div class="shindan-body">
+          <div class="step-q">Q1. 您目前的在留资格是？</div>
+          <div class="step-hint">不同在留资格，贷款条件和所需文件有所不同</div>
+          <div class="opt-grid">
+            <button class="opt-btn" onclick="selectOpt(this,1)"><span class="opt-icon">🏅</span><span class="opt-label">永住者・特別永住者</span><span class="opt-sub">贷款最有利，条件接近日本人</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,1)"><span class="opt-icon">👨‍👩‍👧</span><span class="opt-label">定住者・日本人配偶者</span><span class="opt-sub">大部分银行可申请贷款</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,1)"><span class="opt-icon">💼</span><span class="opt-label">就労ビザ（技術・人文等）</span><span class="opt-sub">贷款可能，部分银行有限制</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,1)"><span class="opt-icon">🌐</span><span class="opt-label">その他・まず確認したい</span><span class="opt-sub">先ご相談ください</span></button>
+          </div>
+          <div class="step-nav">
+            <div></div>
+            <button class="step-next" id="next1" onclick="goNext(2)" disabled>下一步 →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step-panel" id="step2">
+        <div class="shindan-body">
+          <div class="step-q">Q2. 购房预算范围は？</div>
+          <div class="step-hint">含物件价格，另需准备诸费用约5〜8%</div>
+          <div class="opt-grid">
+            <button class="opt-btn" onclick="selectOpt(this,2)"><span class="opt-icon">🏠</span><span class="opt-label">1,000万円 以下</span><span class="opt-sub">中古戸建・土地が中心</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,2)"><span class="opt-icon">🏡</span><span class="opt-label">1,000〜3,000万円</span><span class="opt-sub">戸建・マンション 豊富な選択肢</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,2)"><span class="opt-icon">🏢</span><span class="opt-label">3,000〜5,000万円</span><span class="opt-sub">都市近郊・好立地物件</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,2)"><span class="opt-icon">🌆</span><span class="opt-label">5,000万円 以上</span><span class="opt-sub">都心・駅近・新築含む</span></button>
+          </div>
+          <div class="step-nav">
+            <button class="step-back" onclick="goBack(1)">← 返回</button>
+            <button class="step-next" id="next2" onclick="goNext(3)" disabled>下一步 →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step-panel" id="step3">
+        <div class="shindan-body">
+          <div class="step-q">Q3. 希望的物件类型是？</div>
+          <div class="step-hint">可按生活方式和今后计划来选择</div>
+          <div class="opt-grid">
+            <button class="opt-btn" onclick="selectOpt(this,3)"><span class="opt-icon">🏠</span><span class="opt-label">中古戸建（二手独栋）</span><span class="opt-sub">价格实惠，可自由改装</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,3)"><span class="opt-icon">✨</span><span class="opt-label">新築戸建（新建独栋）</span><span class="opt-sub">全新设备，省心省力</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,3)"><span class="opt-icon">🏢</span><span class="opt-label">マンション（公寓）</span><span class="opt-sub">安全管理，便利性高</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,3)"><span class="opt-icon">🌳</span><span class="opt-label">土地のみ（地皮）</span><span class="opt-sub">自建房或投资用途</span></button>
+          </div>
+          <div class="step-nav">
+            <button class="step-back" onclick="goBack(2)">← 返回</button>
+            <button class="step-next" id="next3" onclick="goNext(4)" disabled>下一步 →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="step-panel" id="step4">
+        <div class="shindan-body">
+          <div class="step-q">Q4. 购房的主要目的是？</div>
+          <div class="step-hint">目的不同，物件选择和签约方式也有区别</div>
+          <div class="opt-grid">
+            <button class="opt-btn" onclick="selectOpt(this,4)"><span class="opt-icon">🏡</span><span class="opt-label">自住（自己居住）</span><span class="opt-sub">可利用住宅ローン减税</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,4)"><span class="opt-icon">📈</span><span class="opt-label">投资（出租收益）</span><span class="opt-sub">稳定租金收入，资产运用</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,4)"><span class="opt-icon">🔄</span><span class="opt-label">自住兼投资</span><span class="opt-sub">将来出租或转卖</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,4)"><span class="opt-icon">💡</span><span class="opt-label">未定・まず情報収集</span><span class="opt-sub">先了解情况，再做决定</span></button>
+          </div>
+          <div class="step-nav">
+            <button class="step-back" onclick="goBack(3)">← 返回</button>
+            <button class="step-next" id="next4" onclick="goNext(5)" disabled>下一步 →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 5 -->
+      <div class="step-panel" id="step5">
+        <div class="shindan-body">
+          <div class="step-q">Q5. 住房贷款についてはどうお考えですか？</div>
+          <div class="step-hint">在日外国人も条件次第で贷款申请可能です</div>
+          <div class="opt-grid">
+            <button class="opt-btn" onclick="selectOpt(this,5)"><span class="opt-icon">🏦</span><span class="opt-label">希望利用贷款</span><span class="opt-sub">首付10〜20%，需银行审查</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,5)"><span class="opt-icon">💰</span><span class="opt-label">全额现金购买</span><span class="opt-sub">无审查，手续更简便</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,5)"><span class="opt-icon">❓</span><span class="opt-label">不确定，想先了解</span><span class="opt-sub">可先进行模拟测算</span></button>
+            <button class="opt-btn" onclick="selectOpt(this,5)"><span class="opt-icon">📋</span><span class="opt-label">已有仮審査通過実績</span><span class="opt-sub">已获银行预审批准</span></button>
+          </div>
+          <div class="step-nav">
+            <button class="step-back" onclick="goBack(4)">← 返回</button>
+            <button class="step-next" id="next5" onclick="showResult()" disabled>查看诊断结果 →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULT -->
+      <div class="result-panel" id="resultPanel">
+        <div class="result-header">
+          <div class="result-icon">✅</div>
+          <div class="result-title">诊断完成！以下是您的建议</div>
+          <div class="result-sub" id="resultSub"></div>
+        </div>
+        <div class="result-cards" id="resultCards"></div>
+        <div class="result-cta">
+          <button class="cta-wechat" onclick="document.getElementById('wechat').scrollIntoView({behavior:'smooth'})">💬 通过微信咨询详情</button>
+          <button class="cta-restart" onclick="restartShindan()">🔄 重新诊断</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW 购房流程 -->
+<section class="sec sec-bg" id="flow">
+  <div class="container">
+    <p class="sec-en">PURCHASE FLOW</p>
+    <h2 class="sec-title">购房流程一览</h2>
+    <div class="sec-bar"></div>
+    <div class="flow-steps">
+      <div class="flow-step"><div class="flow-num">1</div><div class="flow-icon">💬</div><div class="flow-title">初次咨询</div><div class="flow-desc">通过微信或电话说明需求、预算和条件。完全免费，中文对应。</div></div>
+      <div class="flow-step"><div class="flow-num">2</div><div class="flow-icon">🔍</div><div class="flow-title">物件检索・紹介</div><div class="flow-desc">根据条件检索物件，包括市场未公开的内部信息。</div></div>
+      <div class="flow-step"><div class="flow-num">3</div><div class="flow-icon">🏠</div><div class="flow-title">现场参观</div><div class="flow-desc">中文陪同内覧，无强制推销，按自己节奏确认物件状况。</div></div>
+      <div class="flow-step"><div class="flow-num">4</div><div class="flow-icon">🏦</div><div class="flow-title">贷款仮審査</div><div class="flow-desc">协助准备申请资料，比较多家银行条件，选最优方案。</div></div>
+      <div class="flow-step"><div class="flow-num">5</div><div class="flow-icon">📝</div><div class="flow-title">签订买卖合同</div><div class="flow-desc">重要事项用中文说明，签约全程有中文翻译支持。</div></div>
+      <div class="flow-step"><div class="flow-num">6</div><div class="flow-icon">🔑</div><div class="flow-title">交房・入住</div><div class="flow-desc">完成过户登记，拿到钥匙。售后咨询持续提供支持。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOAN 贷款说明 -->
+<section class="sec" id="loan">
+  <div class="container">
+    <p class="sec-en">LOAN INFORMATION</p>
+    <h2 class="sec-title">在日外国人贷款说明</h2>
+    <div class="sec-bar"></div>
+    <div class="loan-grid">
+      <div class="loan-card">
+        <div class="loan-card-title">🏦 贷款申请基本条件</div>
+        <ul>
+          <li>在日本有稳定收入（受雇或自营）</li>
+          <li>在留资格有效期原则1年以上</li>
+          <li>年收入约300万円以上（因行而异）</li>
+          <li>无逾期还款记录</li>
+          <li>在日居住实绩（3年以上更有利）</li>
+        </ul>
+      </div>
+      <div class="loan-card">
+        <div class="loan-card-title">📋 所需主要证明文件</div>
+        <ul>
+          <li>在留卡（表里両面）</li>
+          <li>护照（パスポート）</li>
+          <li>所得証明書・源泉徴収票</li>
+          <li>住民税決定通知書</li>
+          <li>健康保険証</li>
+          <li>印鑑登録証明書</li>
+        </ul>
+      </div>
+      <div class="loan-card">
+        <div class="loan-card-title">💴 利率类型对比</div>
+        <p><strong>变动利率：</strong>目前约0.3〜1.0%。随市场波动，短期内较划算。</p>
+        <p style="margin-top:10px"><strong>固定利率：</strong>目前约1.5〜2.5%。还款额固定，便于规划家庭财务。</p>
+        <p style="margin-top:10px"><strong>固定期選択型：</strong>前N年固定后转变动，属折中方案。</p>
+      </div>
+      <div class="loan-card">
+        <div class="loan-card-title">📊 永住有无 vs 贷款条件</div>
+        <p><strong>有永住・特別永住：</strong>可申请几乎所有银行，利率条件与日本人相同。</p>
+        <p style="margin-top:10px"><strong>无永住（就労ビザ等）：</strong>可申请银行范围较窄，首付比例可能要求20〜30%，在留期间残余也会影响审查结果。</p>
+      </div>
+    </div>
+    <div class="loan-note">
+      <span>⚠️</span>
+      <span>以上为一般性参考信息。贷款条件因金融机构、申请人情况、物件条件不同而有较大差异。请通过微信联系我们，进行免费的个案咨询与模拟测算。</span>
+    </div>
+  </div>
+</section>
+
+<!-- WECHAT -->
+<section class="wechat-sec" id="wechat">
+  <div class="wechat-inner container">
+    <div class="wechat-text">
+      <h2>微信咨询・QRコード</h2>
+      <p>所有咨询均可通过<span class="wid">微信（WeChat）</span>中文对应。<br>购房疑问、物件预约、贷款模拟，均可随时联系。<br>担当者が中国語で丁寧にご説明いたします。</p>
+      <div class="wechat-steps">
+        <div class="wechat-step"><div class="ws-num">1</div><span>扫描右侧二维码或搜索微信ID添加好友</span></div>
+        <div class="wechat-step"><div class="ws-num">2</div><span>发送「购房咨询」即可开始</span></div>
+        <div class="wechat-step"><div class="ws-num">3</div><span>担当者が中文で迅速に回答いたします</span></div>
+      </div>
+    </div>
+    <div class="wechat-qr-wrap">
+      <div class="qr-frame">
+        <div class="qr-placeholder">
+          <span style="font-size:28px">📱</span>
+          <span>QRコードを<br>ここに配置</span>
+        </div>
+      </div>
+      <div class="qr-label">微信ID</div>
+      <div class="wechat-id">nexcess_realestate</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section class="sec sec-bg" id="company">
+  <div class="container">
+    <p class="sec-en">ABOUT US</p>
+    <h2 class="sec-title">公司介绍</h2>
+    <div class="sec-bar"></div>
+    <div class="company-grid">
+      <div class="company-about">
+        <h3>为在日华人提供可信赖的不动产服务</h3>
+        <p>合同会社Nexcessは横浜を拠点とした经营顾问・不动产投资公司です。在日中国人の方が购房过程中に直面する言語バリアや制度の違いを深く理解した上で、法律・税務相談から合同起草まで一站式の中文サービスを提供しています。</p>
+        <p>物件紹介だけでなく、贷款申请支援、在留资格与税务方面的综合建议を含む全面サポートで、安心安全な日本での住宅購入を実現します。</p>
+        <div class="license-badge">🏛️ 宅地建物取引業 免許番号：神奈川県知事（X）第XXXXX号</div>
+      </div>
+      <div>
+        <table class="company-table">
+          <tr><th>公司名称</th><td>合同会社 Nexcess</td></tr>
+          <tr><th>所在地</th><td>神奈川県横浜市（詳細はお問合せください）</td></tr>
+          <tr><th>业务内容</th><td>不動産売買仲介・経営顧問・法務・税務支援</td></tr>
+          <tr><th>対応言語</th><td>日本語・中国語（普通话）</td></tr>
+          <tr><th>营业时间</th><td>9:00〜18:00（定休：日曜・祝日）</td></tr>
+          <tr><th>联系方式</th><td>微信 / メール / 电话</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="foot-logo">Nexcess 不動産</div>
+      <p>在日华人不动产购买专门窗口<br>横浜を拠点に中国語対応で<br>不動産取引を全面サポート</p>
+    </div>
+    <div class="foot-col">
+      <h4>购房服务</h4>
+      <ul>
+        <li><a href="#properties">最新物件一览</a></li>
+        <li><a href="#shindan">免费购房诊断</a></li>
+        <li><a href="#flow">购房流程</a></li>
+        <li><a href="#loan">贷款说明</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>专题内容</h4>
+      <ul>
+        <li><a href="#">在日外国人贷款指南</a></li>
+        <li><a href="#">永住者购房须知</a></li>
+        <li><a href="#">购房税费说明</a></li>
+        <li><a href="#">中古房改装流程</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>联系我们</h4>
+      <ul>
+        <li><a href="#wechat">💬 微信咨询</a></li>
+        <li><a href="#">📧 发送邮件</a></li>
+        <li><a href="#company">🏢 公司介绍</a></li>
+        <li><a href="#">🔒 隐私政策</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 合同会社 Nexcess. All rights reserved. ｜ 宅地建物取引業 神奈川県知事（X）第XXXXX号
+  </div>
+</footer>
+
+<script>
+const answers = {};
+
+function selectOpt(btn, step) {
+  document.querySelectorAll('#step' + step + ' .opt-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  answers[step] = btn.querySelector('.opt-label').textContent.trim();
+  const nb = document.getElementById('next' + step);
+  if (nb) nb.disabled = false;
+}
+
+function goNext(step) {
+  document.getElementById('step' + (step - 1)).classList.remove('active');
+  document.getElementById('step' + step).classList.add('active');
+  updateProg(step);
+  document.getElementById('shindan').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function goBack(step) {
+  document.getElementById('step' + (step + 1)).classList.remove('active');
+  document.getElementById('step' + step).classList.add('active');
+  updateProg(step);
+}
+
+function updateProg(cur) {
+  document.getElementById('progBar').style.width = ((cur - 1) / 5 * 100) + '%';
+  for (let i = 1; i <= 6; i++) {
+    const d = document.getElementById('dot' + i);
+    d.classList.remove('active','done');
+    if (i < cur) d.classList.add('done');
+    if (i === cur) d.classList.add('active');
+  }
+}
+
+function showResult() {
+  document.getElementById('step5').classList.remove('active');
+  document.getElementById('progBar').style.width = '100%';
+  for (let i = 1; i <= 6; i++) document.getElementById('dot' + i).classList.add('done');
+
+  const visa = answers[1] || '';
+  const budget = answers[2] || '';
+  const type = answers[3] || '';
+  const purpose = answers[4] || '';
+  const loan = answers[5] || '';
+  const cards = [];
+
+  // Visa card
+  if (visa.includes('永住')) {
+    cards.push({icon:'✅', title:'在留资格：贷款条件最优', body:'作为永住者，您可申请几乎所有日本银行的住宅ローン，利率条件与日本人相同。建议积极比较变动利率型贷款，降低前期负担。', warn:false});
+  } else if (visa.includes('定住') || visa.includes('配偶者')) {
+    cards.push({icon:'✅', title:'在留资格：多数银行可申请', body:'定住者・配偶者资格可申请大部分银行贷款。建议提前准备所得証明书和在留相关文件，有效缩短审查时间。', warn:false});
+  } else if (visa.includes('就労')) {
+    cards.push({icon:'⚠️', title:'在留资格：可申请银行范围较窄', body:'就労ビザ対応の銀行はSBI住信ネット銀行等に限られます。在留期間の残余日数も審査に影響しますので、更新前後のタイミングにご注意ください。首付比率は20〜30%になる場合があります。', warn:true});
+  } else {
+    cards.push({icon:'📋', title:'在留资格：需先确认', body:'在留资格は贷款可否に直结します。まずは详细状况をお聞かせください。最適な进め方をご提案いたします。', warn:false});
+  }
+
+  // Loan card
+  if (loan.includes('利用贷款') || loan.includes('不确定')) {
+    const mid = budget.includes('以下') ? 800 : budget.includes('1,000〜3,000') ? 2000 : budget.includes('3,000〜5,000') ? 4000 : 6000;
+    cards.push({icon:'💴', title:'贷款模拟目安', body:`予算${budget}の場合、首付金の目安は${Math.round(mid*0.1)}〜${Math.round(mid*0.2)}万円（10〜20%）。諸費用（仲介手数料・登記費等）は別途5〜8%程度ご準備ください。詳細な试算は微信にてご依頼ください。`, warn:false});
+  } else if (loan.includes('全额')) {
+    cards.push({icon:'💰', title:'全额现金：手续最简便', body:'全额现金购买无需贷款审查，可快速推进合同流程。来自境外的资金建议提前确认资金来源证明文件（残高証明等），以备签约时使用。', warn:false});
+  }
+
+  // Purpose card
+  if (purpose.includes('自住')) {
+    cards.push({icon:'🏡', title:'自住购房：可享住宅ローン减税', body:'居住用物件購入で「住宅ローン控除（減税）」が適用される場合があります。年末残高の0.7%が最大13年間、所得税・住民税から控除。外国人の方も条件次第で利用可能です。', warn:false});
+  } else if (purpose.includes('投资')) {
+    cards.push({icon:'📈', title:'投资购房：收益率与税务管理', body:'出租收益（家賃収入）は日本で確定申告が必要です。管理費・修繕費・減価償却費を経費計上することで節税可能。横浜・川崎エリアは賃貸需要が安定しており、表面利回り5〜7%も狙えるエリアがあります。', warn:false});
+  }
+
+  // Type card
+  if (type.includes('中古')) {
+    cards.push({icon:'🔧', title:'中古戸建：购买前建议进行建物诊断', body:'中古物件は価格が低く、自由にリフォームできるのが魅力です。当社ではホームインスペクション（建物診断）のアレンジとリフォーム業者のご紹介も承っております。', warn:false});
+  }
+
+  // CTA card
+  cards.push({icon:'💬', title:'次のステップ：免费个别咨询', body:'上記の内容についてご不明な点、追加でお知りになりたいことがあれば、微信（WeChat）でお気軽にご連絡ください。中国語で詳しくご説明いたします。物件内覧のご予約も受け付けております。', warn:false});
+
+  document.getElementById('resultSub').textContent = `在留：「${visa}」 / 予算：「${budget}」 / ${purpose} をもとにした提案です`;
+  const c = document.getElementById('resultCards');
+  c.innerHTML = '';
+  cards.forEach(card => {
+    const d = document.createElement('div');
+    d.className = 'result-card' + (card.warn ? ' warn' : '');
+    d.innerHTML = `<div class="result-card-title">${card.icon} ${card.title}</div><p>${card.body}</p>`;
+    c.appendChild(d);
+  });
+  document.getElementById('resultPanel').classList.add('active');
+  document.getElementById('shindan').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function restartShindan() {
+  for (const k in answers) delete answers[k];
+  document.querySelectorAll('.step-panel,.result-panel').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
+  document.querySelectorAll('.step-next').forEach(b => b.disabled = true);
+  document.getElementById('step1').classList.add('active');
+  updateProg(1);
+  document.getElementById('shindan').scrollIntoView({behavior:'smooth', block:'start'});
+}
+</script>
+</body>
+</html>
